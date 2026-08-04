@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Ju-Ting Sun</title>
-    <link>http://localhost:1314/posts/</link>
+    <link>https://Ruby-0218.github.io/posts/</link>
     <description>Recent content in Posts on Ju-Ting Sun</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 20 Jul 2026 19:30:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1314/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://Ruby-0218.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Quantifying ‘The GOAT’: A Data-Driven Analysis of Novak Djokovic</title>
-      <link>http://localhost:1314/posts/the-goat/</link>
+      <link>https://Ruby-0218.github.io/posts/the-goat/</link>
       <pubDate>Mon, 20 Jul 2026 19:30:00 +0800</pubDate>
-      <guid>http://localhost:1314/posts/the-goat/</guid>
+      <guid>https://Ruby-0218.github.io/posts/the-goat/</guid>
       <description>A data-driven exploration of Novak Djokovic’s Grand Slam career, clutch performance, five-set endurance, major finals, and career evolution from 2005 through 2025.</description>
     </item>
   </channel>
