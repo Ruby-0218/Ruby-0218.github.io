@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1"
+  >
+
+  <meta name="robots" content="max-image-preview:large">
+
+  <title>My Music Archive | Ju-Ting Sun</title>
+
+  <meta
+    name="description"
+    content="Artists I return to, songs I overplay, and opinions nobody asked for."
+  >
+
+  <link rel="canonical" href="https://Ruby-0218.github.io/music/">
+
+  <meta property="og:title" content="My Music Archive">
+
+  <meta
+    property="og:description"
+    content="Artists I return to, songs I overplay, and opinions nobody asked for."
+  >
+
+  <meta property="og:url" content="https://Ruby-0218.github.io/music/">
+  <meta property="og:site_name" content="Ju-Ting Sun">
+  <meta property="og:type" content="website">
+
+  <link
+    rel="stylesheet"
+    href="https://whycoffee.blog/assets/lib/bootstrap-5.3.3/bootstrap.min.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://whycoffee.blog/assets/css/styles.css"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <script src="https://whycoffee.blog/assets/js/theme-handler.js"></script>
+
+  <style>
+    :root {
+      --music-bg: #ffffff;
+      --music-surface: #f7f7f5;
+      --music-card: #ffffff;
+      --music-text: #111111;
+      --music-muted: #7d7d7d;
+      --music-border: #d8d8d5;
+      --music-soft-border: #ececea;
+      --music-hover: #f0f1ed;
+      --music-accent: #9da79f;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--music-bg);
+      color: var(--music-text);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    header a,
+    header a:visited,
+    header a:hover,
+    header a:active {
+      color: #111111 !important;
+    }
+
+    .music-page {
+      width: 100%;
+    }
+
+    .article-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.7rem;
+    }
+
+    .article-tag {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      line-height: 1.4;
+      opacity: 0.72;
+    }
+
+    .music-introduction {
+      max-width: 760px;
+      margin: 4rem 0 1.5rem;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .music-introduction p {
+      margin-bottom: 1.4rem;
+    }
+
+    .music-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.8rem;
+      margin: 2.5rem 0 0;
+      padding: 1.1rem 0;
+      border-top: 1px solid var(--music-border);
+      border-bottom: 1px solid var(--music-border);
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .music-section {
+      padding: 5rem 0;
+    }
+
+    .music-section + .music-section {
+      border-top: 1px solid var(--music-soft-border);
+    }
+
+    .music-section-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .music-section-heading h2 {
+      margin: 0;
+      color: var(--music-text);
+      font-family: inherit;
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    .music-section-heading p {
+      max-width: 390px;
+      margin: 0;
+      color: var(--music-muted);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .repeat-carousel {
+      position: relative;
+    }
+
+    .repeat-viewport {
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      cursor: grab;
+      scrollbar-width: none;
+      scroll-behavior: smooth;
+      overscroll-behavior-x: contain;
+    }
+
+    .repeat-viewport::-webkit-scrollbar {
+      display: none;
+    }
+
+    .repeat-viewport.is-dragging {
+      cursor: grabbing;
+      user-select: none;
+      scroll-behavior: auto;
+    }
+
+    .repeat-track {
+      display: flex;
+      gap: 1rem;
+      width: max-content;
+      padding: 0.1rem 0;
+    }
+
+    .repeat-card {
+      flex: 0 0 clamp(220px, 28vw, 285px);
+      overflow: hidden;
+      border: 1px solid var(--music-soft-border);
+      background: var(--music-card);
+      color: var(--music-text);
+      text-decoration: none;
+      transition:
+        border-color 180ms ease,
+        background-color 180ms ease;
+    }
+
+    .repeat-card:hover {
+      border-color: var(--music-text);
+    }
+
+    .repeat-card-artwork {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: var(--music-surface);
+    }
+
+    .repeat-card-artwork img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.9);
+      transition:
+        transform 260ms ease,
+        filter 260ms ease;
+    }
+
+    .repeat-card:hover .repeat-card-artwork img {
+      transform: scale(1.02);
+      filter: saturate(1);
+    }
+
+    .repeat-card-placeholder {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      background:
+        linear-gradient(
+          145deg,
+          #f4f4f1,
+          #e9ebe7
+        );
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .repeat-card-body {
+      padding: 1rem 1rem 1.15rem;
+    }
+
+    .repeat-card-number {
+      margin-bottom: 0.6rem;
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.66rem;
+      letter-spacing: 0.08em;
+    }
+
+    .repeat-card-title {
+      margin: 0;
+      font-family: inherit;
+      font-size: 1.15rem;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .repeat-card-artist {
+      margin: 0.4rem 0 0;
+      color: var(--music-muted);
+      font-size: 0.82rem;
+    }
+
+    .repeat-card-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin-top: 0.9rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--music-soft-border);
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.64rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .repeat-controls {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1.2rem;
+    }
+
+    .repeat-control {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      border: 1px solid var(--music-border);
+      border-radius: 50%;
+      background: var(--music-bg);
+      color: var(--music-text);
+      cursor: pointer;
+      transition:
+        border-color 180ms ease,
+        background-color 180ms ease;
+    }
+
+    .repeat-control:hover {
+      border-color: var(--music-text);
+      background: var(--music-hover);
+    }
+
+    .repeat-edge {
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      bottom: 56px;
+      width: 8%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .repeat-edge-left {
+      left: 0;
+    }
+
+    .repeat-edge-right {
+      right: 0;
+    }
+
+    .repeat-edge-left:hover {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.88),
+          rgba(255, 255, 255, 0)
+        );
+    }
+
+    .repeat-edge-right:hover {
+      background:
+        linear-gradient(
+          270deg,
+          rgba(255, 255, 255, 0.88),
+          rgba(255, 255, 255, 0)
+        );
+    }
+
+    .artist-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin: -0.5rem 0 2rem;
+    }
+
+    .artist-sort-button {
+      padding: 0.55rem 0.8rem;
+      border: 1px solid var(--music-border);
+      background: var(--music-bg);
+      color: var(--music-text);
+      font-family: "DM Mono", monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition:
+        border-color 180ms ease,
+        background-color 180ms ease,
+        color 180ms ease;
+    }
+
+    .artist-sort-button:hover,
+    .artist-sort-button.is-active {
+      border-color: var(--music-text);
+      background: var(--music-text);
+      color: #ffffff;
+    }
+
+    .artist-columns {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.6rem;
+      align-items: start;
+    }
+
+    .artist-column {
+      min-width: 0;
+    }
+
+    .artist-column-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--music-text);
+    }
+
+    .artist-column-heading h3 {
+      margin: 0;
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .artist-column-count {
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+    }
+
+    .artist-grid {
+      display: grid;
+      gap: 1.4rem;
+    }
+
+    .artist-card {
+      display: block;
+      color: var(--music-text);
+      text-decoration: none;
+    }
+
+    .artist-card-image {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border: 1px solid var(--music-soft-border);
+      background: var(--music-surface);
+      transition: border-color 180ms ease;
+    }
+
+    .artist-card:hover .artist-card-image {
+      border-color: var(--music-text);
+    }
+
+    .artist-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.9);
+      transition:
+        transform 260ms ease,
+        filter 260ms ease;
+    }
+
+    .artist-card:hover .artist-card-image img {
+      transform: scale(1.02);
+      filter: saturate(1);
+    }
+
+    .artist-card-placeholder {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .artist-card-content {
+      padding: 0.8rem 0 0.2rem;
+    }
+
+    .artist-card-title {
+      margin: 0;
+      font-family: inherit;
+      font-size: 1.15rem;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .artist-card-label {
+      margin: 0.4rem 0 0;
+      color: var(--music-muted);
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    .artist-card-meta {
+      margin-top: 0.55rem;
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.64rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .empty-column {
+      padding: 2.5rem 1rem;
+      border: 1px dashed var(--music-border);
+      color: var(--music-muted);
+      font-size: 0.82rem;
+      text-align: center;
+    }
+
+    .decade-grid {
+      display: grid;
+      gap: 0.85rem;
+      max-width: 680px;
+    }
+
+    .decade-row {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .decade-label {
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem;
+    }
+
+    .decade-squares {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .decade-square {
+      width: 14px;
+      height: 14px;
+      background: var(--music-text);
+    }
+
+    .decade-square.muted {
+      background: var(--music-border);
+    }
+
+    .music-closing {
+      max-width: 720px;
+      padding: 5rem 0 7rem;
+      border-top: 1px solid var(--music-soft-border);
+    }
+
+    .music-closing p {
+      margin: 0;
+      font-size: clamp(1.65rem, 3vw, 2.6rem);
+      font-weight: 400;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+    }
+
+    .music-footer {
+      padding: 2rem 0 1rem;
+      border-top: 1px solid var(--music-border);
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+    }
+
+    @media (max-width: 900px) {
+      .artist-columns {
+        gap: 1rem;
+      }
+
+      .repeat-card {
+        flex-basis: clamp(220px, 38vw, 280px);
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .music-introduction {
+        margin-top: 3rem;
+      }
+
+      .music-section {
+        padding: 4rem 0;
+      }
+
+      .music-section-heading {
+        display: block;
+      }
+
+      .music-section-heading p {
+        margin-top: 0.9rem;
+      }
+
+      .repeat-card {
+        flex-basis: min(80vw, 280px);
+      }
+
+      .repeat-edge {
+        display: none;
+      }
+
+      .artist-columns {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+      }
+
+      .artist-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .artist-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .music-stats {
+        gap: 0.7rem 1.2rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .repeat-viewport {
+        scroll-behavior: auto;
+      }
+
+      .repeat-card-artwork img,
+      .artist-card-image img {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="col-lg-8 mx-auto p-3 pb-5 pb-md-6 pt-md-6">
+
+    <header class="d-flex flex-row mb-8">
+      <nav class="mt-0">
+        <a
+          href="/"
+          class="text-decoration-none"
+        >
+          <span style="letter-spacing: 0.02em;">
+            Ju-Ting Sun
+          </span>
+        </a>
+      </nav>
+
+      <nav class="d-inline-flex ms-auto">
+        
+          <a
+            href="/posts/"
+            class="text-decoration-none ms-3"
+          >
+            <span>articles</span>
+          </a>
+        
+      </nav>
+    </header>
+
+    <main class="col-md-12 mb-8 music-page">
+
+      <div class="headers mb-8">
+        <h1 class="title mb-0">
+          My Music Archive
+        </h1>
+
+        
+          <h4 class="subtitle mt-4 mb-0">
+            Artists I return to, songs I overplay, and opinions nobody asked for.
+          </h4>
+        
+      </div>
+
+      <div class="metadata pt-2 border-top">
+        <time
+          datetime="2026-07-29T21:00:00&#43;08:00"
+        >
+          July 29, 2026
+        </time>
+      </div>
+
+      
+        <div class="metadata article-tags mb-8">
+          
+            <span class="article-tag">
+              music
+            </span>
+          
+            <span class="article-tag">
+              personal archive
+            </span>
+          
+            <span class="article-tag">
+              playlist
+            </span>
+          
+        </div>
+      
+
+      <div class="music-introduction">
+        <p>Most of the artists I love are retired, inactive,<br>
+disbanded, or from another generation.</p>
+<p>This is my personal archive of the music that stayed.</p>
+
+      </div>
+
+      
+      
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+      <div class="music-stats">
+        <span>9 artists</span>
+
+        <span>
+          41
+          
+            songs
+          
+        </span>
+
+        <span>decades coming next</span>
+        <span>currently on repeat</span>
+      </div>
+
+      <section
+        id="recently-on-repeat"
+        class="music-section"
+      >
+        <div class="music-section-heading">
+          <h2>Recently on repeat</h2>
+
+          <p>
+            A rotating collection of songs currently following me
+            through work, walks, travel, and ordinary days.
+          </p>
+        </div>
+
+        <div
+          class="repeat-carousel"
+          data-repeat-carousel
+        >
+          <button
+            class="repeat-edge repeat-edge-left"
+            type="button"
+            aria-label="Scroll to previous songs"
+            data-repeat-edge-left
+          ></button>
+
+          <div
+            class="repeat-viewport"
+            data-repeat-viewport
+          >
+            <div class="repeat-track">
+
+              <a
+                class="repeat-card"
+                href="/music/niall-horan/"
+              >
+                <div class="repeat-card-artwork">
+                  <img
+                    src="/images/music/albums/niall-horan-dinner-party.jpg"
+                    alt="End of an Era album cover"
+                    loading="lazy"
+                  >
+                </div>
+
+                <div class="repeat-card-body">
+                  <div class="repeat-card-number">
+                    01
+                  </div>
+
+                  <h3 class="repeat-card-title">
+                    End of an Era
+                  </h3>
+
+                  <p class="repeat-card-artist">
+                    Niall Horan
+                  </p>
+
+                  <div class="repeat-card-meta">
+                    <span>2026</span>
+                    <span>10 / 10</span>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                class="repeat-card"
+                href="/music/niall-horan/"
+              >
+                <div class="repeat-card-artwork">
+                  <img
+                    src="/images/music/albums/niall-horan-the-show.jpg"
+                    alt="Never Grow Up album cover"
+                    loading="lazy"
+                  >
+                </div>
+
+                <div class="repeat-card-body">
+                  <div class="repeat-card-number">
+                    02
+                  </div>
+
+                  <h3 class="repeat-card-title">
+                    Never Grow Up
+                  </h3>
+
+                  <p class="repeat-card-artist">
+                    Niall Horan
+                  </p>
+
+                  <div class="repeat-card-meta">
+                    <span>2023</span>
+                    <span>10 / 10</span>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                class="repeat-card"
+                href="/music/justin-bieber/"
+              >
+                <div class="repeat-card-artwork">
+                  <img
+                    src="/images/music/albums/justin-bieber-swag.jpg"
+                    alt="Walking Away album cover"
+                    loading="lazy"
+                  >
+                </div>
+
+                <div class="repeat-card-body">
+                  <div class="repeat-card-number">
+                    03
+                  </div>
+
+                  <h3 class="repeat-card-title">
+                    Walking Away
+                  </h3>
+
+                  <p class="repeat-card-artist">
+                    Justin Bieber
+                  </p>
+
+                  <div class="repeat-card-meta">
+                    <span>2025</span>
+                    <span>9.8 / 10</span>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                class="repeat-card"
+                href="/music/elvis-presley/"
+              >
+                <div class="repeat-card-artwork">
+                  <img
+                    src="/images/music/albums/elvis-presley-in-the-ghetto.jpg"
+                    alt="In The Ghetto album cover"
+                    loading="lazy"
+                  >
+                </div>
+
+                <div class="repeat-card-body">
+                  <div class="repeat-card-number">
+                    04
+                  </div>
+
+                  <h3 class="repeat-card-title">
+                    In The Ghetto
+                  </h3>
+
+                  <p class="repeat-card-artist">
+                    Elvis Presley
+                  </p>
+
+                  <div class="repeat-card-meta">
+                    <span>1969</span>
+                    <span>9.6 / 10</span>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                class="repeat-card"
+                href="/music/5sos/"
+              >
+                <div class="repeat-card-artwork">
+                  <img
+                    src="/images/music/albums/5sos-teeth.jpg"
+                    alt="Teeth album cover"
+                    loading="lazy"
+                  >
+                </div>
+
+                <div class="repeat-card-body">
+                  <div class="repeat-card-number">
+                    05
+                  </div>
+
+                  <h3 class="repeat-card-title">
+                    Teeth
+                  </h3>
+
+                  <p class="repeat-card-artist">
+                    5 Seconds of Summer
+                  </p>
+
+                  <div class="repeat-card-meta">
+                    <span>2020</span>
+                    <span>9.3 / 10</span>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                class="repeat-card"
+                href="/music/mr.big/"
+              >
+                <div class="repeat-card-artwork">
+                  <img
+                    src="/images/music/albums/mr.big-to-be-with-you.jpg"
+                    alt="To Be With You album cover"
+                    loading="lazy"
+                  >
+                </div>
+
+                <div class="repeat-card-body">
+                  <div class="repeat-card-number">
+                    06
+                  </div>
+
+                  <h3 class="repeat-card-title">
+                    To Be With You
+                  </h3>
+
+                  <p class="repeat-card-artist">
+                    Mr.Big
+                  </p>
+
+                  <div class="repeat-card-meta">
+                    <span>1991</span>
+                    <span>9.1 / 10</span>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                class="repeat-card"
+                href="/music/john-mayer"
+              >
+                <div class="repeat-card-artwork">
+                  <img
+                    src="/images/music/albums/john-mayer-slow-dancing.jpg"
+                    alt="Slow Dancing in the Burning Room album cover"
+                    loading="lazy"
+                  >
+                </div>
+
+                <div class="repeat-card-body">
+                  <div class="repeat-card-number">
+                    07
+                  </div>
+
+                  <h3 class="repeat-card-title">
+                    Slow Dancing in the Burning Room
+                  </h3>
+
+                  <p class="repeat-card-artist">
+                    John Mayer
+                  </p>
+
+                  <div class="repeat-card-meta">
+                    <span>2006</span>
+                    <span>9.4 / 10</span>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                class="repeat-card"
+                href="/music/sam-smith/"
+              >
+                <div class="repeat-card-artwork">
+                  <img
+                    src="/images/music/albums/sam-smith-like-i-can.jpg"
+                    alt="Like I Can album cover"
+                    loading="lazy"
+                  >
+                </div>
+
+                <div class="repeat-card-body">
+                  <div class="repeat-card-number">
+                    08
+                  </div>
+
+                  <h3 class="repeat-card-title">
+                    Like I Can
+                  </h3>
+
+                  <p class="repeat-card-artist">
+                    Sam Smith
+                  </p>
+
+                  <div class="repeat-card-meta">
+                    <span>2014</span>
+                    <span>8.9 / 10</span>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+          <button
+            class="repeat-edge repeat-edge-right"
+            type="button"
+            aria-label="Scroll to next songs"
+            data-repeat-edge-right
+          ></button>
+
+          <div class="repeat-controls">
+            <button
+              class="repeat-control"
+              type="button"
+              aria-label="Previous song"
+              data-repeat-prev
+            >
+              ←
+            </button>
+
+            <button
+              class="repeat-control"
+              type="button"
+              aria-label="Next song"
+              data-repeat-next
+            >
+              →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="artists"
+        class="music-section"
+      >
+        <div class="music-section-heading">
+          <h2>The artists</h2>
+
+          <p>
+            Female voices, bands and groups, and male voices arranged
+            as three parallel collections.
+          </p>
+        </div>
+
+        <div
+          class="artist-toolbar"
+          aria-label="Sort artists"
+        >
+          <button
+            class="artist-sort-button is-active"
+            type="button"
+            data-artist-sort="alphabetical"
+          >
+            A–Z
+          </button>
+
+          <button
+            class="artist-sort-button"
+            type="button"
+            data-artist-sort="song-count"
+          >
+            Most songs
+          </button>
+        </div>
+
+        
+        
+        
+
+        <div class="artist-columns">
+
+          
+
+            
+            
+
+            <section class="artist-column">
+              <div class="artist-column-heading">
+                <h3>Female voices</h3>
+
+                <span class="artist-column-count">
+                  2
+                </span>
+              </div>
+
+              <div class="artist-grid">
+                
+
+                  
+                    
+                    
+
+                    <a
+                      class="artist-card"
+                      href="/music/bonnie-tyler/"
+                      data-artist-card
+                      data-artist-name="bonnie tyler"
+                      data-song-count="1"
+                    >
+                      <div class="artist-card-image">
+                        
+                          <img
+                            src="/images/music/artists/bonnie-tyler.jpg"
+                            alt="Bonnie Tyler"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      <div class="artist-card-content">
+                        <h4 class="artist-card-title">
+                          Bonnie Tyler
+                        </h4>
+
+                        
+                          <p class="artist-card-label">
+                            The Queen of Power Ballads
+                          </p>
+                        
+
+                        <div class="artist-card-meta">
+                          
+                            1 song
+                          
+                        </div>
+                      </div>
+                    </a>
+                  
+                    
+                    
+
+                    <a
+                      class="artist-card"
+                      href="/music/tracy-chapman/"
+                      data-artist-card
+                      data-artist-name="tracy chapman"
+                      data-song-count="1"
+                    >
+                      <div class="artist-card-image">
+                        
+                          <img
+                            src="/images/music/artists/tracy-chapman.jpg"
+                            alt="Tracy Chapman"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      <div class="artist-card-content">
+                        <h4 class="artist-card-title">
+                          Tracy Chapman
+                        </h4>
+
+                        
+                          <p class="artist-card-label">
+                            Raw, acoustic storytelling straight to the soul
+                          </p>
+                        
+
+                        <div class="artist-card-meta">
+                          
+                            1 song
+                          
+                        </div>
+                      </div>
+                    </a>
+                  
+
+                
+              </div>
+            </section>
+
+          
+
+            
+            
+
+            <section class="artist-column">
+              <div class="artist-column-heading">
+                <h3>Bands &amp; groups</h3>
+
+                <span class="artist-column-count">
+                  3
+                </span>
+              </div>
+
+              <div class="artist-grid">
+                
+
+                  
+                    
+                    
+
+                    <a
+                      class="artist-card"
+                      href="/music/eagles/"
+                      data-artist-card
+                      data-artist-name="eagles"
+                      data-song-count="12"
+                    >
+                      <div class="artist-card-image">
+                        
+                          <img
+                            src="/images/music/artists/eagles.jpg"
+                            alt="Eagles"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      <div class="artist-card-content">
+                        <h4 class="artist-card-title">
+                          Eagles
+                        </h4>
+
+                        
+                          <p class="artist-card-label">
+                            The Kings of California Rock
+                          </p>
+                        
+
+                        <div class="artist-card-meta">
+                          
+                            12 songs
+                          
+                        </div>
+                      </div>
+                    </a>
+                  
+                    
+                    
+
+                    <a
+                      class="artist-card"
+                      href="/music/queen/"
+                      data-artist-card
+                      data-artist-name="queen"
+                      data-song-count="3"
+                    >
+                      <div class="artist-card-image">
+                        
+                          <img
+                            src="/images/music/artists/queen.jpg"
+                            alt="Queen"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      <div class="artist-card-content">
+                        <h4 class="artist-card-title">
+                          Queen
+                        </h4>
+
+                        
+                          <p class="artist-card-label">
+                            The theatrical one
+                          </p>
+                        
+
+                        <div class="artist-card-meta">
+                          
+                            3 songs
+                          
+                        </div>
+                      </div>
+                    </a>
+                  
+                    
+                    
+
+                    <a
+                      class="artist-card"
+                      href="/music/fleetwood-mac/"
+                      data-artist-card
+                      data-artist-name="fleetwood mac"
+                      data-song-count="1"
+                    >
+                      <div class="artist-card-image">
+                        
+                          <img
+                            src="/images/music/artists/fleetwood-mac.jpg"
+                            alt="Fleetwood Mac"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      <div class="artist-card-content">
+                        <h4 class="artist-card-title">
+                          Fleetwood Mac
+                        </h4>
+
+                        
+                          <p class="artist-card-label">
+                            Beautiful emotional chaos
+                          </p>
+                        
+
+                        <div class="artist-card-meta">
+                          
+                            1 song
+                          
+                        </div>
+                      </div>
+                    </a>
+                  
+
+                
+              </div>
+            </section>
+
+          
+
+            
+            
+
+            <section class="artist-column">
+              <div class="artist-column-heading">
+                <h3>Male voices</h3>
+
+                <span class="artist-column-count">
+                  4
+                </span>
+              </div>
+
+              <div class="artist-grid">
+                
+
+                  
+                    
+                    
+
+                    <a
+                      class="artist-card"
+                      href="/music/michael-jackson/"
+                      data-artist-card
+                      data-artist-name="michael jackson"
+                      data-song-count="16"
+                    >
+                      <div class="artist-card-image">
+                        
+                          <img
+                            src="/images/music/artists/michael-jackson.jpg"
+                            alt="Michael Jackson"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      <div class="artist-card-content">
+                        <h4 class="artist-card-title">
+                          Michael Jackson
+                        </h4>
+
+                        
+                          <p class="artist-card-label">
+                            The performer who made pop feel cinematic
+                          </p>
+                        
+
+                        <div class="artist-card-meta">
+                          
+                            16 songs
+                          
+                        </div>
+                      </div>
+                    </a>
+                  
+                    
+                    
+
+                    <a
+                      class="artist-card"
+                      href="/music/bob-seger/"
+                      data-artist-card
+                      data-artist-name="bob seger"
+                      data-song-count="1"
+                    >
+                      <div class="artist-card-image">
+                        
+                          <img
+                            src="/images/music/artists/bob-seger.jpg"
+                            alt="Bob Seger"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      <div class="artist-card-content">
+                        <h4 class="artist-card-title">
+                          Bob Seger
+                        </h4>
+
+                        
+                          <p class="artist-card-label">
+                            Heartland Rock Legend
+                          </p>
+                        
+
+                        <div class="artist-card-meta">
+                          
+                            1 song
+                          
+                        </div>
+                      </div>
+                    </a>
+                  
+                    
+                    
+
+                    <a
+                      class="artist-card"
+                      href="/music/david-bowie/"
+                      data-artist-card
+                      data-artist-name="david bowie"
+                      data-song-count="2"
+                    >
+                      <div class="artist-card-image">
+                        
+                          <img
+                            src="/images/music/artists/david-bowie.jpg"
+                            alt="David Bowie"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      <div class="artist-card-content">
+                        <h4 class="artist-card-title">
+                          David Bowie
+                        </h4>
+
+                        
+                          <p class="artist-card-label">
+                            The ultimate chameleon of rock and pop
+                          </p>
+                        
+
+                        <div class="artist-card-meta">
+                          
+                            2 songs
+                          
+                        </div>
+                      </div>
+                    </a>
+                  
+                    
+                    
+
+                    <a
+                      class="artist-card"
+                      href="/music/prince/"
+                      data-artist-card
+                      data-artist-name="prince"
+                      data-song-count="4"
+                    >
+                      <div class="artist-card-image">
+                        
+                          <img
+                            src="/images/music/artists/prince.jpg"
+                            alt="Prince"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      <div class="artist-card-content">
+                        <h4 class="artist-card-title">
+                          Prince
+                        </h4>
+
+                        
+                          <p class="artist-card-label">
+                            The purple prodigy who broke every musical rule
+                          </p>
+                        
+
+                        <div class="artist-card-meta">
+                          
+                            4 songs
+                          
+                        </div>
+                      </div>
+                    </a>
+                  
+
+                
+              </div>
+            </section>
+
+          
+
+        </div>
+      </section>
+
+      <section class="music-section">
+        <div class="music-section-heading">
+          <h2>Across the decades</h2>
+
+          <p>
+            Each square will represent one selected song once the
+            archive data is complete.
+          </p>
+        </div>
+
+        <div class="decade-grid">
+
+          
+
+            
+
+            <div class="decade-row">
+              <span class="decade-label">
+                1960s
+              </span>
+
+              <div class="decade-squares">
+                
+                  <span
+                    class="decade-square"
+                  ></span>
+                
+                  <span
+                    class="decade-square"
+                  ></span>
+                
+              </div>
+            </div>
+
+          
+
+            
+
+            <div class="decade-row">
+              <span class="decade-label">
+                1970s
+              </span>
+
+              <div class="decade-squares">
+                
+                  <span
+                    class="decade-square"
+                  ></span>
+                
+                  <span
+                    class="decade-square"
+                  ></span>
+                
+                  <span
+                    class="decade-square"
+                  ></span>
+                
+                  <span
+                    class="decade-square"
+                  ></span>
+                
+                  <span
+                    class="decade-square"
+                  ></span>
+                
+                  <span
+                    class="decade-square"
+                  ></span>
+                
+              </div>
+            </div>
+
+          
+
+            
+
+            <div class="decade-row">
+              <span class="decade-label">
+                1980s
+              </span>
+
+              <div class="decade-squares">
+                
+                  <span
+                    class="decade-square"
+                  ></span>
+                
+                  <span
+                    class="decade-square"
+                  ></span>
+                
+                  <span
+                    class="decade-square"
+                  ></span>
+                
+                  <span
+                    class="decade-square"
+                  ></span>
+                
+              </div>
+            </div>
+
+          
+
+            
+
+            <div class="decade-row">
+              <span class="decade-label">
+                1990s
+              </span>
+
+              <div class="decade-squares">
+                
+                  <span
+                    class="decade-square"
+                  ></span>
+                
+                  <span
+                    class="decade-square"
+                  ></span>
+                
+                  <span
+                    class="decade-square"
+                  ></span>
+                
+              </div>
+            </div>
+
+          
+
+            
+
+            <div class="decade-row">
+              <span class="decade-label">
+                2000s
+              </span>
+
+              <div class="decade-squares">
+                
+                  <span
+                    class="decade-square muted"
+                  ></span>
+                
+                  <span
+                    class="decade-square muted"
+                  ></span>
+                
+              </div>
+            </div>
+
+          
+
+            
+
+            <div class="decade-row">
+              <span class="decade-label">
+                2010s
+              </span>
+
+              <div class="decade-squares">
+                
+                  <span
+                    class="decade-square muted"
+                  ></span>
+                
+              </div>
+            </div>
+
+          
+
+            
+
+            <div class="decade-row">
+              <span class="decade-label">
+                2020s
+              </span>
+
+              <div class="decade-squares">
+                
+                  <span
+                    class="decade-square muted"
+                  ></span>
+                
+                  <span
+                    class="decade-square muted"
+                  ></span>
+                
+              </div>
+            </div>
+
+          
+
+        </div>
+      </section>
+
+      <section class="music-closing">
+        <p>
+          Some songs stay because they are perfect. Others stay because
+          they arrived at exactly the right moment.
+        </p>
+      </section>
+
+    </main>
+
+    <footer class="music-footer">
+      Curated by Ju-Ting Sun.
+    </footer>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const carousel = document.querySelector(
+        "[data-repeat-carousel]"
+      );
+
+      if (carousel) {
+        const viewport = carousel.querySelector(
+          "[data-repeat-viewport]"
+        );
+
+        const previousButton = carousel.querySelector(
+          "[data-repeat-prev]"
+        );
+
+        const nextButton = carousel.querySelector(
+          "[data-repeat-next]"
+        );
+
+        const leftEdge = carousel.querySelector(
+          "[data-repeat-edge-left]"
+        );
+
+        const rightEdge = carousel.querySelector(
+          "[data-repeat-edge-right]"
+        );
+
+        const getScrollDistance = () => {
+          const firstCard = viewport.querySelector(
+            ".repeat-card"
+          );
+
+          const track = viewport.querySelector(
+            ".repeat-track"
+          );
+
+          if (!firstCard || !track) {
+            return 280;
+          }
+
+          const gap = parseFloat(
+            window.getComputedStyle(track).gap
+          ) || 16;
+
+          return (
+            firstCard.getBoundingClientRect().width
+            + gap
+          );
+        };
+
+        const moveCarousel = (direction) => {
+          viewport.scrollBy({
+            left: direction * getScrollDistance(),
+            behavior: "smooth"
+          });
+        };
+
+        if (previousButton) {
+          previousButton.addEventListener(
+            "click",
+            () => {
+              moveCarousel(-1);
+            }
+          );
+        }
+
+        if (nextButton) {
+          nextButton.addEventListener(
+            "click",
+            () => {
+              moveCarousel(1);
+            }
+          );
+        }
+
+        let edgeScrollFrame = null;
+        let edgeDirection = 0;
+
+        const beginEdgeScroll = (direction) => {
+          edgeDirection = direction;
+
+          const animate = () => {
+            viewport.scrollLeft += edgeDirection * 3;
+
+            edgeScrollFrame = requestAnimationFrame(
+              animate
+            );
+          };
+
+          if (!edgeScrollFrame) {
+            animate();
+          }
+        };
+
+        const stopEdgeScroll = () => {
+          if (edgeScrollFrame) {
+            cancelAnimationFrame(edgeScrollFrame);
+            edgeScrollFrame = null;
+          }
+        };
+
+        if (leftEdge) {
+          leftEdge.addEventListener(
+            "mouseenter",
+            () => {
+              beginEdgeScroll(-1);
+            }
+          );
+
+          leftEdge.addEventListener(
+            "mouseleave",
+            stopEdgeScroll
+          );
+        }
+
+        if (rightEdge) {
+          rightEdge.addEventListener(
+            "mouseenter",
+            () => {
+              beginEdgeScroll(1);
+            }
+          );
+
+          rightEdge.addEventListener(
+            "mouseleave",
+            stopEdgeScroll
+          );
+        }
+
+        let isDragging = false;
+        let dragStartX = 0;
+        let initialScrollLeft = 0;
+
+        viewport.addEventListener(
+          "pointerdown",
+          (event) => {
+            isDragging = true;
+            dragStartX = event.clientX;
+            initialScrollLeft = viewport.scrollLeft;
+
+            viewport.classList.add(
+              "is-dragging"
+            );
+
+            viewport.setPointerCapture(
+              event.pointerId
+            );
+          }
+        );
+
+        viewport.addEventListener(
+          "pointermove",
+          (event) => {
+            if (!isDragging) {
+              return;
+            }
+
+            const movement =
+              event.clientX - dragStartX;
+
+            viewport.scrollLeft =
+              initialScrollLeft - movement;
+          }
+        );
+
+        const endDragging = () => {
+          isDragging = false;
+
+          viewport.classList.remove(
+            "is-dragging"
+          );
+        };
+
+        viewport.addEventListener(
+          "pointerup",
+          endDragging
+        );
+
+        viewport.addEventListener(
+          "pointercancel",
+          endDragging
+        );
+
+        viewport.addEventListener(
+          "pointerleave",
+          endDragging
+        );
+      }
+
+      const artistSortButtons =
+        document.querySelectorAll(
+          "[data-artist-sort]"
+        );
+
+      const sortArtistGrids = (sortType) => {
+        const artistGrids =
+          document.querySelectorAll(
+            ".artist-grid"
+          );
+
+        artistGrids.forEach((grid) => {
+          const cards = Array.from(
+            grid.querySelectorAll(
+              "[data-artist-card]"
+            )
+          );
+
+          cards.sort(
+            (firstCard, secondCard) => {
+              if (sortType === "song-count") {
+                const firstCount = Number(
+                  firstCard.dataset.songCount
+                );
+
+                const secondCount = Number(
+                  secondCard.dataset.songCount
+                );
+
+                if (
+                  secondCount !== firstCount
+                ) {
+                  return (
+                    secondCount - firstCount
+                  );
+                }
+              }
+
+              return firstCard.dataset.artistName
+                .localeCompare(
+                  secondCard.dataset.artistName
+                );
+            }
+          );
+
+          cards.forEach((card) => {
+            grid.appendChild(card);
+          });
+        });
+      };
+
+      artistSortButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          artistSortButtons.forEach(
+            (otherButton) => {
+              otherButton.classList.remove(
+                "is-active"
+              );
+            }
+          );
+
+          button.classList.add(
+            "is-active"
+          );
+
+          sortArtistGrids(
+            button.dataset.artistSort
+          );
+        });
+      });
+
+      sortArtistGrids("alphabetical");
+    });
+  </script>
+</body>
+</html>

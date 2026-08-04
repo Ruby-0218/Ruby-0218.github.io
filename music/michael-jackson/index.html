@@ -1,0 +1,3277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1"
+  >
+
+  <meta name="robots" content="max-image-preview:large">
+
+  <title>Michael Jackson | My Music Archive</title>
+
+  <meta
+    name="description"
+    content="Michael Jackson is one of those artists whose songs feel inseparable from performance. Even when I am only listening, the choreography, visual storytelling, and atmosphere of the music still seem present.
+"
+  >
+
+  <link rel="canonical" href="https://Ruby-0218.github.io/music/michael-jackson/">
+
+  <meta property="og:title" content="Michael Jackson">
+
+  <meta
+    property="og:description"
+    content="Michael Jackson is one of those artists whose songs feel inseparable from performance. Even when I am only listening, the choreography, visual storytelling, and atmosphere of the music still seem present.
+"
+  >
+
+  <meta property="og:url" content="https://Ruby-0218.github.io/music/michael-jackson/">
+  <meta property="og:site_name" content="Ju-Ting Sun">
+  <meta property="og:type" content="article">
+
+  
+    
+      <meta property="og:image" content="https://Ruby-0218.github.io/images/music/artists/michael-jackson.jpg">
+    
+  
+
+  <link
+    rel="stylesheet"
+    href="https://whycoffee.blog/assets/lib/bootstrap-5.3.3/bootstrap.min.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://whycoffee.blog/assets/css/styles.css"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <script src="https://whycoffee.blog/assets/js/theme-handler.js"></script>
+
+  <style>
+    :root {
+      --music-bg: #ffffff;
+      --music-surface: #f7f7f5;
+      --music-text: #111111;
+      --music-muted: #7d7d7d;
+      --music-border: #d8d8d5;
+      --music-soft-border: #ececea;
+      --music-hover: #f0f1ed;
+      --music-accent: #9da79f;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--music-bg);
+      color: var(--music-text);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .artist-header-link,
+    .artist-header-link:visited,
+    .artist-header-link:hover,
+    .artist-header-link:active {
+      color: #111111 !important;
+    }
+
+    .artist-page {
+      width: 100%;
+    }
+
+    .artist-title-block {
+      margin-bottom: 3rem;
+    }
+
+    .artist-kicker {
+      margin: 0 0 0.75rem;
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .artist-title {
+      margin: 0;
+      color: var(--music-text);
+      font-family: inherit;
+      font-size: clamp(2.7rem, 6vw, 5.2rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+
+    .artist-label {
+      max-width: 700px;
+      margin: 1.25rem 0 0;
+      color: var(--music-muted);
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      line-height: 1.6;
+    }
+
+    .artist-metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--music-border);
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .artist-hero {
+      margin: 3rem 0 1rem;
+    }
+
+    .artist-hero-frame {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border: 1px solid var(--music-soft-border);
+      background: var(--music-surface);
+    }
+
+    .artist-hero-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .artist-hero-placeholder {
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .image-credit {
+      margin: 0.65rem 0 0;
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.6rem;
+      line-height: 1.6;
+    }
+
+    .image-credit a,
+    .image-credit a:visited {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
+
+    .artist-introduction {
+      max-width: 760px;
+      margin: 4rem 0;
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+
+    .artist-introduction p {
+      margin: 0 0 1.35rem;
+    }
+
+    .artist-summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border-top: 1px solid var(--music-border);
+      border-bottom: 1px solid var(--music-border);
+    }
+
+    .summary-item {
+      min-width: 0;
+      padding: 1.25rem 1rem 1.25rem 0;
+    }
+
+    .summary-item + .summary-item {
+      padding-left: 1rem;
+      border-left: 1px solid var(--music-border);
+    }
+
+    .summary-label {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .summary-value {
+      display: block;
+      color: var(--music-text);
+      font-size: 1.05rem;
+      line-height: 1.4;
+    }
+
+    .songs-section {
+      padding: 5rem 0 6rem;
+    }
+
+    .songs-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .songs-heading h2 {
+      margin: 0;
+      color: var(--music-text);
+      font-family: inherit;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+    }
+
+    .songs-heading p {
+      max-width: 360px;
+      margin: 0;
+      color: var(--music-muted);
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    .song-list {
+      border-top: 1px solid var(--music-text);
+    }
+
+    .song-item {
+      border-bottom: 1px solid var(--music-soft-border);
+    }
+
+    .song-summary {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr) auto 28px;
+      gap: 1rem;
+      align-items: center;
+      width: 100%;
+      padding: 1.25rem 0;
+      border: 0;
+      background: transparent;
+      color: var(--music-text);
+      text-align: left;
+      cursor: pointer;
+      transition: background-color 180ms ease;
+    }
+
+    .song-summary:hover {
+      background: var(--music-hover);
+    }
+
+    .song-number {
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+    }
+
+    .song-main {
+      min-width: 0;
+    }
+
+    .song-title {
+      display: block;
+      margin: 0;
+      overflow: hidden;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.35;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .song-subtitle {
+      display: block;
+      margin: 0.3rem 0 0;
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.63rem;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .song-score {
+      min-width: 52px;
+      font-family: "DM Mono", monospace;
+      font-size: 0.75rem;
+      text-align: right;
+    }
+
+    .song-toggle-icon {
+      display: inline-block;
+      font-size: 1.2rem;
+      font-weight: 300;
+      text-align: center;
+      transition: transform 180ms ease;
+    }
+
+    .song-item.is-open .song-toggle-icon {
+      transform: rotate(45deg);
+    }
+
+    .song-details {
+      display: none;
+      padding: 0 0 2rem 60px;
+    }
+
+    .song-item.is-open .song-details {
+      display: block;
+    }
+
+    .song-detail-layout {
+      display: grid;
+      grid-template-columns: minmax(160px, 220px) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .song-media-column {
+      min-width: 0;
+    }
+
+    .song-artwork {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border: 1px solid var(--music-soft-border);
+      background: var(--music-surface);
+    }
+
+    .song-artwork img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .song-artwork-placeholder {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .watch-mv-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      width: 100%;
+      margin-top: 0.75rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--music-text);
+      background: var(--music-text);
+      color: #ffffff !important;
+      font-family: "DM Mono", monospace;
+      font-size: 0.66rem;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition:
+        background-color 180ms ease,
+        color 180ms ease;
+    }
+
+    .watch-mv-link:hover {
+      background: #ffffff;
+      color: var(--music-text) !important;
+    }
+
+    .song-facts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .song-fact {
+      min-width: 0;
+    }
+
+    .song-fact.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .fact-label {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.61rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .fact-value {
+      margin: 0;
+      color: var(--music-text);
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    .fun-fact-content p {
+        margin: 0 0 1rem;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .fun-fact-content p:last-child {
+        margin-bottom: 0;
+    }
+
+    .fun-fact-content blockquote {
+        margin: 1.25rem 0;
+        padding-left: 1rem;
+        border-left: 2px solid var(--music-text);
+        color: var(--music-text);
+        font-style: italic;
+    }
+
+    .score-line {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .score-track {
+      position: relative;
+      flex: 1;
+      height: 3px;
+      overflow: hidden;
+      background: var(--music-border);
+    }
+
+    .score-fill {
+      height: 100%;
+      background: var(--music-text);
+    }
+
+    .back-section {
+      padding: 2rem 0 6rem;
+      border-top: 1px solid var(--music-soft-border);
+    }
+
+    .back-link,
+    .back-link:visited {
+      color: var(--music-text);
+      font-size: 0.9rem;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    .artist-footer {
+      padding: 2rem 0 1rem;
+      border-top: 1px solid var(--music-border);
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+    }
+
+    @media (max-width: 767.98px) {
+      .artist-title-block {
+        margin-bottom: 2.5rem;
+      }
+
+      .artist-summary {
+        grid-template-columns: 1fr;
+      }
+
+      .summary-item {
+        padding: 1rem 0;
+      }
+
+      .summary-item + .summary-item {
+        padding-left: 0;
+        border-top: 1px solid var(--music-border);
+        border-left: 0;
+      }
+
+      .songs-heading {
+        display: block;
+      }
+
+      .songs-heading p {
+        margin-top: 0.8rem;
+      }
+
+      .song-summary {
+        grid-template-columns: 34px minmax(0, 1fr) auto 24px;
+        gap: 0.65rem;
+      }
+
+      .song-details {
+        padding-left: 0;
+      }
+
+      .song-detail-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .song-artwork {
+        max-width: 250px;
+      }
+
+      .watch-mv-link {
+        max-width: 250px;
+      }
+
+      .song-facts {
+        grid-template-columns: 1fr;
+      }
+
+      .song-fact.full-width {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .song-score {
+        min-width: 42px;
+      }
+
+      .song-title {
+        font-size: 0.92rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .song-toggle-icon {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="col-lg-8 mx-auto p-3 pb-5 pb-md-6 pt-md-6">
+
+    <header class="d-flex flex-row mb-8">
+      <nav class="mt-0">
+        <a
+          href="/"
+          class="text-decoration-none artist-header-link"
+        >
+          <span style="letter-spacing: 0.02em;">
+            Ju-Ting Sun
+          </span>
+        </a>
+      </nav>
+
+      <nav class="d-inline-flex ms-auto">
+        
+          <a
+            href="/music/"
+            class="text-decoration-none ms-3 artist-header-link"
+          >
+            <span>back to music</span>
+          </a>
+        
+      </nav>
+    </header>
+
+    <main class="col-md-12 mb-8 artist-page">
+
+      <section class="artist-title-block">
+        <p class="artist-kicker">
+          
+            
+              Male voice
+            
+          
+        </p>
+
+        <h1 class="artist-title">
+          Michael Jackson
+        </h1>
+
+        
+          <p class="artist-label">
+            The performer who made pop feel cinematic
+          </p>
+        
+
+        <div class="artist-metadata">
+          
+            <span>1964–2009</span>
+          
+
+          
+            <span>Gary, Indiana, United States</span>
+          
+
+          
+            <span>Pop · R&amp;B · Soul · Funk</span>
+          
+        </div>
+      </section>
+
+      <figure class="artist-hero">
+        <div class="artist-hero-frame">
+          
+            
+              <img
+                src="/images/music/artists/michael-jackson.jpg"
+                alt="Michael Jackson"
+                style="object-position: center 25%;"
+              >
+            
+          
+        </div>
+
+        
+          <figcaption class="image-credit">
+            
+              Unknown Photographer / Promotional Photo
+            
+
+            
+              · Sourced via Pinterest
+            
+
+            
+              · Fair Use (Non-commercial)
+            
+
+            
+              ·
+              <a
+                href="https://in.pinterest.com/pin/985231160519251/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                source
+              </a>
+            
+          </figcaption>
+        
+      </figure>
+
+      <section class="artist-introduction">
+        
+          <p>Michael Jackson is one of those artists whose songs feel inseparable from performance. Even when I am only listening, the choreography, visual storytelling, and atmosphere of the music still seem present.
+</p>
+        
+
+        <p>Michael Jackson is one of the artists I return to when I want pop music that feels carefully built around rhythm, movement, drama, and visual storytelling. Honestly, my only regret is that I didn&rsquo;t dive into his world sooner. It wasn&rsquo;t until I watched the Broadway show <em>MJ the Musical</em> and his documentary film that I truly fell in love with his artistry and started listening to all of his songs on repeat. He is a 100% absolute genius. Without a single doubt.</p>
+
+      </section>
+
+      
+      
+
+      
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+      
+
+      
+        
+      
+
+      <section class="artist-summary">
+        <div class="summary-item">
+          <span class="summary-label">
+            Selected songs
+          </span>
+
+          <span class="summary-value">
+            16
+          </span>
+        </div>
+
+        <div class="summary-item">
+          <span class="summary-label">
+            Average score
+          </span>
+
+          <span class="summary-value">
+            
+              8.3 / 10
+            
+          </span>
+        </div>
+
+        <div class="summary-item">
+          <span class="summary-label">
+            Archive label
+          </span>
+
+          <span class="summary-value">
+            
+              The performer who made pop feel cinematic
+            
+          </span>
+        </div>
+      </section>
+
+      <section class="songs-section">
+        <div class="songs-heading">
+          <h2>Selected songs</h2>
+
+          <p>
+            Open a track to see its score, listening context,
+            recognition, fun fact, and music-video link.
+          </p>
+        </div>
+
+        <div class="song-list">
+          
+
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    01
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Remember the Time
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Dangerous
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1991
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    9.5
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/michael-jackson-dangerous.jpg"
+                            alt="Artwork for Remember the Time"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/LeiFF0gvqcc?si=vycMOMtT4j-jAiAq"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 95%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            9.5
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Major hit
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            I vividly remember watching the musical, and this was the very first song that truly hit me before I deeply explored MJ&#39;s discography.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            Every time, I am being honest, just give it a try, and you&#39;re gonna love it.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>There&rsquo;s something undeniably cool about turning a severe injury into the ultimate flex. The music video for this song was already an absolute spectacle featuring Eddie Murphy, Iman, and Magic Johnson&hellip; but the real magic happened live.</p>
+<p>At the 1993 Soul Train Music Awards, MJ was supposed to perform this insanely complex choreography. The problem? He had a severely twisted ankle. So instead of canceling, he performed the entire routine while sitting down in an ornate chair. And somehow, he still grooved harder and looked cooler than anyone else in the room standing on two feet. (I mean, he&rsquo;s MJ, so not surprised)</p>
+<p><strong>Lesson learned: If you&rsquo;re a true king, you don&rsquo;t even need to stand up to steal the show ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    02
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Dirty Diana
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Bad
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1987
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    9.4
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/michael-jackson-bad.jpg"
+                            alt="Artwork for Dirty Diana"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/yUi_S6YWjZw?si=UZamN4msHPJNL5o9"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 94%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            9.4
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Major hit
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Not exactly sure, but probably when I was doing a &#34;research&#34; into all his albums.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            When you have to commute to school and need an let all your resentments and angst go.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>I always find it hilarious when artists try to be overly polite, and it completely backfires.
+For years, people gossiped that this song was a diss track about MJ’s close friend Diana Ross, but he explicitly shut that down - it was actually about persistent groupies.</p>
+<p>The best part? Princess Diana was a massive fan of it. Before a London concert, MJ actually took it off the setlist because he thought singing &ldquo;Dirty Diana&rdquo; in front of actual royalty would be disrespectful. When they met right before the show, the Princess literally asked him, &ldquo;Are you going to play Dirty Diana? It’s my favorite!&rdquo; He had to scramble to put it back into the show just for her.</p>
+<p><strong>Lesson learned: Never assume a princess doesn&rsquo;t want to rock out to a song about scandalous groupies ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    03
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Who is it
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Dangerous
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1991
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    9.4
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/michael-jackson-dangerous.jpg"
+                            alt="Artwork for Who is it"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/PnrBouyAuIg?si=something"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 94%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            9.4
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Major hit
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Discovered this hidden masterpiece while randomly shuffling his discography.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            When you want something deeply dramatic and reflective or you are cheated bu someone, just play it
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>I always thought producers were the ones building the beats, but MJ was basically a walking human synthesizer.</p>
+<p>He literally composed this deeply paranoid, moody track by beatboxing the heavy bassline and singing every single instrumental part to his studio team. He didn&rsquo;t even play an instrument for the demo - the entire complex, layered arrangement came straight out of his mouth. Talk about pure genius behavior.</p>
+<p><strong>Lesson learned: You don&rsquo;t need expensive studio instruments when your vocal cords are a whole orchestra ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    04
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      They Don&#39;t Care About Us
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        HIStory: Past, Present and Future, Book I
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1995
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    9.4
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/michael-jackson-history.jpg"
+                            alt="Artwork for They Don&#39;t Care About Us"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/QNJL6nfu__Q?si=hmRy7GiXfyVdc_Qw"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 94%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            9.4
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Major hit
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            When I was exploring his albums and the beat just instantly grabbed me.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            When you feel angry at the world and everything feels vicious and unfair.
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>I guess sometimes making art requires a level of street cred that no politician can understand.</p>
+<p>When Spike Lee directed this music video in the Dona Marta favela of Rio de Janeiro, the Brazilian government actually tried to ban them from filming. They were terrified that showing the slums would ruin their chances of hosting the 2004 Olympics.</p>
+<p>So, what did MJ do? He completely bypassed the politicians and got permission straight from the local drug cartel that controlled the area. The local gang literally stood up and provided a human shield of security for Michael while he filmed. (Btw I want the white shirt he wore while shooting the mv so bad!)</p>
+<p><strong>Lesson learned: If the government says no, just ask the local cartel for a filming permit ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    05
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Billie Jean
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Thriller
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1982
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    9.0
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/michael-jackson-thriller.jpg"
+                            alt="Artwork for Billie Jean"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/Zi_XLOBDo_Y?si=9hlfV1F9kzklyV-f"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 90%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            9.0
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Global classic
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            As long as I have memory, I just knew this song for no reason. It&#39;s literally coded in human DNA.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            Anytime, anywhere.
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>Fame sounds great until you have random people claiming you fathered their twins.</p>
+<p>This iconic track was actually inspired by the creepy, obsessive groupies (whom they called &ldquo;Billie Jeans&rdquo;) that used to stalk MJ and his brothers. Interestingly, legendary producer Quincy Jones absolutely hated the title. He begged MJ to change it to &ldquo;Not My Lover&rdquo; because he was terrified people would think the song was about the famous female tennis player, Billie Jean King. MJ stood his ground and refused.</p>
+<p>Guess what? Billie Jean King didn&rsquo;t mind at all and thought it was pretty cool!</p>
+<p><strong>Lesson learned: If you write one of the greatest basslines in history, you can name it whatever you want ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    06
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Human Nature
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Thriller
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1982
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    8.7
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/michael-jackson-thriller.jpg"
+                            alt="Artwork for Human Nature"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/ElN_4vUvTPs?si=_YWWmVcrh3yVnFZD"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 87%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            8.7
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Major hit
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Just one of those timeless songs that randomly pops up and instantly calms your mind.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            When you just want to believe the world is nice and peaceful.
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>It’s wild to think that one of the most delicate, beautiful vocal performances of MJ&rsquo;s career almost didn&rsquo;t exist.</p>
+<p>This gorgeous ballad was actually written by Steve Porcaro from the band Toto, purely to comfort his young daughter after she had a rough day at school. Producer Quincy Jones only discovered it by accident because he was listening to a cassette tape that was meant to showcase a completely different song.</p>
+<p>Hooray for happy accidents.</p>
+<p><strong>Lesson learned: Always listen to the end of the tape ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    07
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Beat it
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Thriller
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1982
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    8.6
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/michael-jackson-thriller.jpg"
+                            alt="Artwork for Beat it"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/oRdxUFDoQe0?si=B3xL3LWRogAC0SVC"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 86%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            8.6
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Major hit
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Honestly, since the day I was born, I just had the memory of hearing this. It&#39;s everywhere.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            When you want to get soooo hyped up or just feel like dancing your heart out.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>Most artists hire professional actors to look tough in music videos, but MJ took it to a whole different level.</p>
+<p>He wanted this video to feel gritty and real, so he went out and cast 80 actual, real-life gang members from the rival Crips and Bloods in Los Angeles. He literally got two sworn enemy gangs to call a truce, come to the set, and dance it out together.</p>
+<p>Oh, and that face-melting guitar solo? Eddie Van Halen recorded it completely for free, just as a favor. (OMG just as a favor&hellip;Looks like everyone loves MJ)</p>
+<p><strong>Lesson learned: Music is the only thing powerful enough to stop gang violence and get legendary guitarists to work for free ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    08
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Bad
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Bad
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1987
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    8.4
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/michael-jackson-bad.jpg"
+                            alt="Artwork for Bad"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/dsUXAEzaC3Q?si=m0-aohD4EU4MJIzh"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 84%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            8.4
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Major hit
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Everywhere in NYC, not even a lie.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            When you&#39;re strutting down the street and want to feel like the absolute boss.
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>I’ve always felt that tragic missed opportunities in music history are fascinating.</p>
+<p>This track was originally supposed to be the ultimate pop-royalty showdown: a duet between Michael Jackson and Prince! MJ sent Prince the demo, hoping for an epic face-off. But Prince heard the opening lyric (&ldquo;Your butt is mine&rdquo;) and instantly rejected it.</p>
+<p>Prince famously joked in interviews, &ldquo;Who is singing that to whom? Because you sure aren&rsquo;t singing it to me!&rdquo; So MJ just went ahead and made it a solo masterpiece instead. (Gosh I really want to see them work together&hellip;)</p>
+<p><strong>Lesson learned: Be careful with your opening lyrics if you&rsquo;re trying to collaborate with another massive ego ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    09
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Heal the World
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Dangerous
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1991
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    8.0
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/michael-jackson-dangerous.jpg"
+                            alt="Artwork for Heal the World"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/BWf-eARnf6U?si=2Y9eGwHnciiFqgmb"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 80%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            8.0
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Major hit
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            My junior high school&#39;s music teacher played this song for us and it was really soothing.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            When you lie down on the massage chair, or you just desperately want a peaceful world with no wars.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>For a guy who created the most intense, rhythm-heavy pop anthems, his proudest moment was actually his softest. MJ stated that out of his entire discography, this was the song he was most proud to have ever created.</p>
+<p>The purest part? He wrote the entire melody and lyrics while literally sitting high up in the branches of the &ldquo;Giving Tree&rdquo; at his Neverland Ranch. It’s exactly the kind of fairytale origin story you’d expect for a song about saving the planet.</p>
+<p><strong>Lesson learned: Sometimes the best way to heal the world is to just go sit in a tree for a while ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    10
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Ghosts
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Blood on the Dance Floor: HIStory in the Mix
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1997
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    8.0
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/michael-jackson-history.jpg"
+                            alt="Artwork for Ghosts"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/Xh9Cp4rd7mI?si=QaHZNdRrXm3M5MqY"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 80%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            8.0
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Major hit
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            My friend suggested I listen to this song because she said it&#39;s a total hidden gem, right after we watched the movie MJ together.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            When you want that spooky, theatrical MJ vibe but are slightly tired of Thriller.
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>If you thought <em>Thriller</em> was his only cinematic horror masterpiece, think again.</p>
+<p>The music video for <em>Ghosts</em> isn&rsquo;t just a video; it&rsquo;s a 39-minute short film co-written by the absolute legend of horror, Stephen King! MJ plays multiple roles in it, including that chubby, arrogant town mayor, hiding under insane prosthetic makeup. It actually held the Guinness World Record for the longest music video ever made for a very long time.</p>
+<p><strong>Lesson learned: If you&rsquo;re going to do a spooky video, you might as well call Stephen King to write the script ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    11
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Smooth Criminal
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Bad
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1987
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    8.0
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/michael-jackson-bad.jpg"
+                            alt="Artwork for Smooth Criminal"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/h_D3VFfhvs4?si=gDay-akcNm17mm_8"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 80%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            8.0
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Global classic
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Not sure, but I guess maybe after I watched the musical?.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            Anytime! But definitely NOT in KTV cuz it is ridiculously hard to sing (I&#39;ve tried and my friends felt so confused...)
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>I always thought &ldquo;Annie&rdquo; was some mysterious woman caught in a dark underworld, but the truth is way more clinical.</p>
+<p>Ever wondered why MJ keeps aggressively asking, &ldquo;Annie, are you OK?&rdquo; It’s actually a direct reference to &ldquo;Resusci Anne&rdquo; - the standard mannequin used in CPR training classes worldwide! MJ had recently taken a CPR class, where you are literally taught to shake the dummy and ask that exact question.</p>
+<p>And guess what? The phrase just stuck in his head, turning standard first-aid protocol into music history, I have to say, well-done, never thought this could be a song&hellip; really a genius.</p>
+<p><strong>Lesson learned: Pay attention in your first-aid classes, even though you can&rsquo;t make a song, at least you can save someone ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    12
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Black or White
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Dangerous
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1991
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    7.8
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/michael-jackson-dangerous.jpg"
+                            alt="Artwork for Black or White"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/F2AitTPI5U0?si=pXzJ1_y1jY7kQ3mZ"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 78%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            7.8
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Global classic
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Literally everywhere. It&#39;s just one of those songs that you hear playing randomly and instantly recognize, especially in NYC.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            When you want a catchy, upbeat anthem to bounce your head to, no matter who you&#39;re with.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>Some music videos are just promotional clips, but MJ treated his like global cinematic events.</p>
+<p>When this video premiered in 1991, it was broadcast simultaneously in 27 countries to a record - breaking audience of 500 million people! After Macaulay Culkin blasted his dad through the roof with a giant amp, the video blew everyone&rsquo;s minds with its final sequence. It used groundbreaking face-morphing computer technology to show people of different races seamlessly transforming into one another, something expensive and futuristic for its time.</p>
+<p><strong>Lesson learned: Why just release a song when you can hijack the televisions of half a billion people at once? ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    13
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Dangerous
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Dangerous
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1991
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    7.5
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/michael-jackson-dangerous.jpg"
+                            alt="Artwork for Dangerous"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/jr9uliNQwNA?si=nf8kIcICziY7prz3"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 75%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            7.5
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Major hit
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Not sure but I think I just vaguely remember hearing it somewhere before diving in.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            When you&#39;re power, walking in the city and need a slick, heavy bassline to pace your steps.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>It’s funny how a rejected idea can evolve into the defining sound of a whole new era.</p>
+<p>The whispered, mechanical, almost industrial groove of this song was way ahead of its time. But it actually started as an earlier track called &ldquo;Streetwalker&rdquo; that MJ wanted on the <em>Bad</em> album.
+Producer Quincy Jones convinced him to drop it.</p>
+<p>Years later, MJ refused to let the concept die, revamping it with producer Teddy Riley into the slick, new-jack-swing masterpiece we know today.</p>
+<p><strong>Lesson learned: Never throw away a good idea just because someone else didn&rsquo;t get it the first time (but unless you are MJ) ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    14
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Thriller
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Thriller
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1982
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    7.3
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/michael-jackson-thriller.jpg"
+                            alt="Artwork for Thriller"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/sOnqjkJTMaA?si=a7VY67NgJ4mq7HSd"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 73%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            7.3
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Major hit
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            When I was an intern at the American Institute in Taiwan, and we actually performed this for Halloween!
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            Obviously, it is the ultimate Halloween anthem.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>Imagine a world where the ultimate Halloween anthem was actually just a sparkly disco track.</p>
+<p>The original title for this legendary spooky song was actually&hellip; &ldquo;Starlight.&rdquo; The chorus literally went, &ldquo;Give me some starlight!&rdquo; Thankfully, the writer changed it to something scarier.</p>
+<p>Also, horror icon Vincent Price recorded his creepy voiceover rap in just two takes. He was offered a choice: a percentage of the album sales or a flat $20,000 fee. He chose the flat fee.
+Considering <em>Thriller</em> became the best-selling album in human history, that might have been the worst financial decision ever made.</p>
+<p><strong>Lesson learned: When someone offers you royalties on a Michael Jackson album, ALWAYS take the royalties ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    15
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Man in the Mirror
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Bad
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1987
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    7.0
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/michael-jackson-bad.jpg"
+                            alt="Artwork for Man in the Mirror"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/PivWY9wn5ps?si=CTJc1eqmNapZ75Ir"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 70%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            7.0
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Major hit
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Not sure, but maybe when I walked around Times Square and it was either giving &#34;Empire State of Mind&#34; or &#34;MJ&#39;s essentials&#34; vibes, I guess.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            A quieter evening when you just want to relax and do some soul-searching.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>You’d think the King of Pop wrote all his most personal anthems, but this is one of the rare mega-hits he actually didn&rsquo;t write, cool huh?</p>
+<p>It was co-written by Siedah Garrett. When she first recorded the demo, she was terrified MJ would reject it because it was too raw and vulnerable. Instead, he loved it so much he made it the emotional centerpiece of the <em>Bad</em> album, bringing in a massive gospel choir to give it that overwhelming weight.</p>
+<p><strong>Lesson learned: Don&rsquo;t be afraid to pitch your vulnerable ideas to a genius, they might just make it legendary ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    16
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Give in to me
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Dangerous
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1991
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    7.0
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/michael-jackson-dangerous.jpg"
+                            alt="Artwork for Give in to me"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/LJ7qXHjxj_0?si=_hvpAxv28q7106Xa"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 70%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            7.0
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Major hit
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            My sister played this song for me; she heard it from her boyfriend&#39;s MJ vinyl and found it pretty catchy.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            Not entirely sure, but maybe it&#39;s suitable for when you&#39;re feeling edgy or going through some bad feelings?
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>MJ always loved proving that he could out-rock the actual rockstars.</p>
+<p>For this dark, gritty, angst-filled track, he didn&rsquo;t just want a standard pop-rock guitar riff, he literally brought in Guns N&rsquo; Roses guitarist Slash! Slash came into the studio, laid down those electrifying solos, and even starred in the sweaty, underground rock club music video.</p>
+<p>It showed a totally different, grunge-leaning side of MJ that proved his insane versatility.</p>
+<p><strong>Lesson learned: If you want to make a proper rock song, just borrow the guitarist from Guns N&rsquo; Roses ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+
+          
+        </div>
+      </section>
+
+      <section class="back-section">
+        
+          <a
+            class="back-link"
+            href="/music/"
+          >
+            ← Back to My Music Archive
+          </a>
+        
+      </section>
+
+    </main>
+
+    <footer class="artist-footer">
+      Curated by Ju-Ting Sun.
+    </footer>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const songItems = document.querySelectorAll(
+        ".song-item"
+      );
+
+      songItems.forEach((item) => {
+        const summaryButton = item.querySelector(
+          ".song-summary"
+        );
+
+        if (!summaryButton) {
+          return;
+        }
+
+        summaryButton.addEventListener("click", () => {
+          const isOpen = item.classList.toggle(
+            "is-open"
+          );
+
+          summaryButton.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+          );
+        });
+      });
+    });
+  </script>
+</body>
+</html>

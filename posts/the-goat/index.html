@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1"
+  >
+
+  <meta name="robots" content="max-image-preview:large">
+
+  <title>Quantifying ‘The GOAT’: A Data-Driven Analysis of Novak Djokovic | Ju-Ting Sun</title>
+
+  <meta
+    name="description"
+    content="A data-driven exploration of Novak Djokovic’s Grand Slam career, clutch performance, five-set endurance, major finals, and career evolution from 2005 through 2025."
+  >
+
+  <link rel="canonical" href="https://Ruby-0218.github.io/posts/the-goat/">
+
+  <meta property="og:title" content="Quantifying ‘The GOAT’: A Data-Driven Analysis of Novak Djokovic">
+
+  <meta
+    property="og:description"
+    content="A data-driven exploration of Novak Djokovic’s Grand Slam career, clutch performance, five-set endurance, major finals, and career evolution from 2005 through 2025."
+  >
+
+  <meta property="og:url" content="https://Ruby-0218.github.io/posts/the-goat/">
+  <meta property="og:site_name" content="Ju-Ting Sun">
+
+  <meta
+    property="og:type"
+    content="article"
+  >
+
+  
+
+  
+    <meta
+      property="article:published_time"
+      content="2026-07-20T19:30:00&#43;08:00"
+    >
+  
+
+  <link
+    rel="stylesheet"
+    href="https://whycoffee.blog/assets/lib/bootstrap-5.3.3/bootstrap.min.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://whycoffee.blog/assets/css/styles.css"
+  >
+
+  <script src="https://whycoffee.blog/assets/js/theme-handler.js"></script>
+
+  <style>
+    .article-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .article-table-wrapper table {
+      min-width: 760px;
+    }
+
+    .key-metric {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .analysis-note {
+      border-left: 3px solid var(--main-text-color);
+      padding-left: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .article-figure {
+      width: 100%;
+      margin: 2.5rem 0 3rem;
+      text-align: center;
+    }
+
+    .article-figure img {
+      display: block;
+      width: 100%;
+      max-width: 920px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 0;
+    }
+
+    .article-figure figcaption {
+      width: 100%;
+      max-width: 920px;
+      margin: 0.8rem auto 0;
+      color: var(--main-text-color);
+      font-size: 0.85rem;
+      line-height: 1.6;
+      opacity: 0.72;
+      text-align: left;
+    }
+
+    .article-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.7rem;
+    }
+
+    .article-tag {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      line-height: 1.4;
+      opacity: 0.72;
+    }
+
+    #table-of-contents {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    #table-of-contents nav {
+      width: 100%;
+    }
+
+    #table-of-contents nav > ul {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    #table-of-contents nav > ul > li {
+      margin: 0 0 1.15rem 0;
+      padding: 0;
+    }
+
+    #table-of-contents nav > ul > li > a {
+      display: inline;
+      color: var(--main-text-color);
+      font-size: 1rem;
+      line-height: 1.5;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    #table-of-contents nav > ul > li > ul {
+      display: none;
+    }
+
+    #table-of-contents
+      nav
+      > ul
+      > li.data-analyses-entry
+      > ul {
+      display: block;
+      margin-top: 0.75rem;
+      margin-left: 1.5rem;
+      padding-left: 1rem;
+      list-style-type: square;
+    }
+
+    #table-of-contents
+      nav
+      > ul
+      > li.data-analyses-entry
+      > ul
+      > li {
+      margin-bottom: 0.75rem;
+      padding-left: 0.25rem;
+    }
+
+    #table-of-contents
+      nav
+      > ul
+      > li.data-analyses-entry
+      > ul
+      > li
+      > a {
+      color: var(--main-text-color);
+      font-size: 1rem;
+      line-height: 1.5;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    #table-of-contents nav ul ul ul {
+      display: none;
+    }
+
+    #table-of-contents a {
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 767.98px) {
+      .article-figure {
+        margin: 2rem 0 2.5rem;
+      }
+
+      .article-figure figcaption {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="col-lg-8 mx-auto p-3 pb-5 pb-md-6 pt-md-6">
+
+    <header class="d-flex flex-row mb-8">
+      <nav class="mt-0">
+        <a
+          href="/"
+          class="text-decoration-none"
+        >
+          <span style="letter-spacing: 0.02em;">
+            Ju-Ting Sun
+          </span>
+        </a>
+      </nav>
+
+      <nav class="d-inline-flex ms-auto">
+        
+          <a
+            href="/posts/"
+            class="text-decoration-none ms-3"
+          >
+            <span>articles</span>
+          </a>
+        
+      </nav>
+    </header>
+
+    <main class="col-md-12 mb-8">
+
+      
+        <div class="headers mb-8">
+          <h1 class="title mb-0">
+            Quantifying ‘The GOAT’: A Data-Driven Analysis of Novak Djokovic
+          </h1>
+
+          
+            <h4 class="subtitle mt-4 mb-0">
+              A data-driven exploration of Novak Djokovic’s Grand Slam career, clutch performance, five-set endurance, major finals, and career evolution from 2005 through 2025.
+            </h4>
+          
+        </div>
+
+        <div class="metadata pt-2 border-top">
+          <time
+            datetime="2026-07-20T19:30:00&#43;08:00"
+          >
+            July 20, 2026
+          </time>
+        </div>
+
+        
+          <div class="metadata article-tags mb-8">
+            
+              <span class="article-tag">
+                tennis
+              </span>
+            
+              <span class="article-tag">
+                data science
+              </span>
+            
+              <span class="article-tag">
+                sports analytics
+              </span>
+            
+              <span class="article-tag">
+                visualization
+              </span>
+            
+          </div>
+        
+
+        
+          <div id="table-of-contents" class="mt-8">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#public-data-sources">Public Data Sources</a>
+      <ul>
+        <li><a href="#atp-match-results">ATP Match Results</a></li>
+        <li><a href="#validation-source">Validation Source</a></li>
+        <li><a href="#future-point-level-sources">Future Point-Level Sources</a></li>
+      </ul>
+    </li>
+    <li><a href="#data-coverage-and-limitations">Data Coverage and Limitations</a></li>
+    <li><a href="#data-analyses">Data Analyses</a>
+      <ul>
+        <li><a href="#grand-slam-career-timeline">Grand Slam Career Timeline</a></li>
+        <li><a href="#performance-by-grand-slam-tournament">Performance by Grand Slam Tournament</a></li>
+        <li><a href="#every-grand-slam-final">Every Grand Slam Final</a></li>
+        <li><a href="#the-clutch-factor">The Clutch Factor</a></li>
+        <li><a href="#age-and-five-set-endurance">Age and Five-Set Endurance</a></li>
+        <li><a href="#performance-against-elite-opponents">Performance Against Elite Opponents</a></li>
+        <li><a href="#career-evolution-across-grand-slam-eras">Career Evolution Across Grand Slam Eras</a></li>
+        <li><a href="#match-dominance-beyond-wins-and-losses">Match Dominance Beyond Wins and Losses</a></li>
+      </ul>
+    </li>
+    <li><a href="#future-research">Future Research</a></li>
+    <li><a href="#limitations">Limitations</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+          </div>
+        
+      
+
+      
+  <article class="post-content">
+    <blockquote>
+<p><strong>Note:</strong> This article focuses on Novak Djokovic’s performance in men’s singles Grand Slam events from 2005 through the end of the 2025 season.</p>
+</blockquote>
+<p class="text-center">
+  <em>The analysis uses publicly available ATP match-result data, with aggregate statistics used only for validation.</em>
+</p>
+<h3 id="introduction">Introduction</h3>
+<p>Tennis fandom is subjective, but statistical claims should be supported by evidence.</p>
+<p>Novak Djokovic is often described as one of the most mentally resilient players in tennis history. Words such as “clutch,” “inevitable,” and “better under pressure” are frequently used by fans and commentators, but these qualities are difficult to measure directly.</p>
+<p>A title count alone cannot fully describe a player’s career. Two players may win the same number of tournaments while producing very different patterns of consistency, endurance, opponent quality, and performance under pressure.</p>
+<p>This article therefore examines Djokovic’s Grand Slam career through several questions:</p>
+<ol>
+<li>How successful is Djokovic in high-pressure Grand Slam situations?</li>
+<li>How has his five-set performance changed with age?</li>
+<li>How does his performance differ across the four Grand Slam tournaments?</li>
+<li>What happened in every Grand Slam final he reached?</li>
+<li>How has his performance evolved across different stages of his career?</li>
+<li>Was Djokovic merely winning, or did the level of match dominance also change across different stages of his Grand Slam career?</li>
+</ol>
+<p>The purpose is not to determine the greatest player through one statistic. Instead, the goal is to examine several dimensions of Djokovic’s Grand Slam career and identify which patterns remain visible across tournament, age, opponent strength, match length, and career period.</p>
+<h3 id="public-data-sources">Public Data Sources</h3>
+<p>Most analyses in this article use publicly available ATP match-result data.</p>
+<h4 id="atp-match-results">ATP Match Results</h4>
+<p>The primary match-level source for this article is the Kaggle dataset “ATP Tennis 2000–2026 Daily Update.”</p>
+<a href="https://www.kaggle.com/datasets/dissfya/atp-tennis-2000-2023daily-pull">
+  Open the ATP match dataset on Kaggle
+</a>
+<p>The dataset contains ATP match records from 2000 onward, including tournament names, dates, tournament categories, surfaces, rounds, match formats, winners, losers, player rankings, and recorded match scores.</p>
+<p>For this article, the dataset was restricted to:</p>
+<ul>
+<li>Men’s singles matches</li>
+<li>Australian Open</li>
+<li>Roland Garros</li>
+<li>Wimbledon</li>
+<li>US Open</li>
+<li>Seasons from 2005 through 2025</li>
+<li>Matches involving Novak Djokovic</li>
+</ul>
+<p>This dataset supports analyses of:</p>
+<ul>
+<li>Grand Slam appearances</li>
+<li>Match wins and losses</li>
+<li>Grand Slam finals</li>
+<li>Tournament-specific performance</li>
+<li>Opponent-ranking groups</li>
+<li>Five-set matches</li>
+<li>Career-era comparisons</li>
+<li>Straight-set victories</li>
+<li>Set-score analysis</li>
+<li>Tie-break patterns where score formatting is consistent</li>
+<li>Comebacks after losing the first set</li>
+</ul>
+<p>The match-result data are sufficient for most sections because the main questions concern tournament outcomes, opponent strength, match length, score structure, and changes across Djokovic’s Grand Slam career.</p>
+<p>However, some variables may not be consistently available. Break-point statistics, point-by-point sequences, and match duration will only be analyzed after their coverage has been checked.</p>
+<h4 id="validation-source">Validation Source</h4>
+<p>Ultimate Tennis Statistics provides aggregate player and tournament statistics, including Grand Slam records, deciding-set results, fifth-set records, tie-break performance, opponent-ranking breakdowns, score distributions, and career summaries.</p>
+<a href="https://www.ultimatetennisstatistics.com/playerProfile?playerId=4920&tab=performance">
+  Open Novak Djokovic’s performance profile
+</a>
+<p>This source will be used to:</p>
+<ul>
+<li>Validate broad match and title totals</li>
+<li>Compare calculated career patterns</li>
+<li>Identify possible discrepancies</li>
+<li>Check whether unusual values require additional review</li>
+</ul>
+<p>Its displayed career statistics will not automatically be treated as Grand Slam-only. A statistic will only be used directly when the relevant tournament filter and date coverage are clearly identified.</p>
+<p>The source is used to validate broad totals and career patterns through December 2024.</p>
+<p>Because its available match coverage does not extend through the full 2025 season, 2025 results will be checked directly against the underlying Kaggle match records rather than validated through Ultimate Tennis Statistics.</p>
+<p>Statistics displayed on the site will not automatically be treated as Grand Slam-only. A value will only be used directly when the relevant tournament filter, date range, and sample definition are clearly identified.</p>
+<h4 id="future-point-level-sources">Future Point-Level Sources</h4>
+<p>Some questions require point-by-point or shot-by-shot data rather than ordinary match results.</p>
+<p>The Match Charting Project contains detailed records for selected professional matches, including rally length, shot direction, return depth, winners, errors, and net approaches.</p>
+<a href="https://github.com/JeffSackmann/tennis_MatchChartingProject">
+  Open the Match Charting Project
+</a>
+<p>Because the matches are contributor-selected rather than a complete record of Djokovic’s Grand Slam career, this dataset will not be combined with the main career-level analysis.</p>
+<p>It may instead support a separate future study based on selected charted matches.</p>
+<h3 id="data-coverage-and-limitations">Data Coverage and Limitations</h3>
+<p>Before calculating any percentage, the data must be checked for missing matches, inconsistent tournament names, incomplete statistics, and unusual score formats.</p>
+<p>Important checks include:</p>
+<ul>
+<li>Whether the four Grand Slam tournaments use consistent names</li>
+<li>Whether the French Open is recorded as French Open or Roland Garros</li>
+<li>Whether retirements and walkovers are included</li>
+<li>Whether incomplete matches should be excluded from endurance calculations</li>
+<li>Whether final-set tie-break formats are recorded consistently</li>
+<li>Whether ranking values are missing</li>
+<li>Whether match-duration values are available</li>
+<li>Whether set scores contain retirement or walkover notation</li>
+<li>Whether break-point and serve statistics are complete enough for comparison</li>
+<li>Whether the latest 2025 files include every completed Grand Slam event</li>
+</ul>
+<p>Every chart should report:</p>
+<ul>
+<li>Sample size</li>
+<li>Date range</li>
+<li>Data source</li>
+<li>Missing-data rules</li>
+<li>Metric definition</li>
+</ul>
+<p>For example:</p>
+<blockquote>
+<p>Djokovic won 18 of 25 included tie-breaks. Sample size: 25 tie-breaks.</p>
+</blockquote>
+<p>A percentage without a sample size can be misleading. A 75% success rate based on four observations should not be interpreted in the same way as a 75% success rate based on eighty observations.</p>
+<p>Retirements and walkovers also require separate treatment.</p>
+<p>A retirement may count as an official match result while providing an incomplete measure of endurance or match dominance. A walkover contains no played points and should not be treated as a completed match.</p>
+<h3 id="data-analyses">Data Analyses</h3>
+<h4 id="grand-slam-career-timeline">Grand Slam Career Timeline</h4>
+<p>The first analysis provides a complete overview of every Grand Slam tournament Djokovic participated in from 2005 through 2025.</p>
+<p>Each tournament-year appearance is classified as:</p>
+<ul>
+<li>Champion</li>
+<li>Runner-up</li>
+<li>Semifinal</li>
+<li>Quarterfinal</li>
+<li>Fourth round</li>
+<li>Third round</li>
+<li>Second round</li>
+<li>First round</li>
+<li>Did not participate</li>
+</ul>
+<p>A player’s Grand Slam career cannot be understood only through championships. Repeated semifinal and final appearances also represent long-term consistency and a low frequency of early-round losses.</p>
+<h5 id="data-source">Data source</h5>
+<a href="https://www.kaggle.com/datasets/dissfya/atp-tennis-2000-2023daily-pull">
+  ATP match results on Kaggle
+</a>
+<p>The horizontal axis represents the year. Each year contains four tournament positions:</p>
+<ul>
+<li>Australian Open</li>
+<li>Roland Garros</li>
+<li>Wimbledon</li>
+<li>US Open</li>
+</ul>
+<p>Grayscale shades and text symbols represent the final result.</p>
+<p>Result labels:</p>
+<ul>
+<li>W: Champion</li>
+<li>F: Runner-up</li>
+<li>SF: Semifinal</li>
+<li>QF: Quarterfinal</li>
+<li>4R: Fourth round</li>
+<li>3R: Third round</li>
+<li>2R: Second round</li>
+<li>1R: First round</li>
+<li>—: Did not participate</li>
+</ul>
+<figure class="article-figure">
+  <img
+    src="/images/djokovic/grand-slam-timeline.webp"
+    alt="Timeline of Novak Djokovic&#39;s results at the four Grand Slam tournaments from 2005 through 2025"
+    loading="lazy"
+    decoding="async"
+  >
+
+  
+    <figcaption>
+      Figure 1. Djokovic’s result at each Grand Slam tournament from 2005 through 2025. W indicates champion, F runner-up, SF semifinal, QF quarterfinal, and DNP did not participate.
+    </figcaption>
+  
+</figure>
+<p>The timeline shows that Djokovic’s Grand Slam career cannot be described as one short peak followed by a steady decline. Once he entered his first dominant period, deep runs became a recurring feature across many seasons.</p>
+<p>The most important pattern is the persistence of semifinal, final, and championship-level results across different stages of his career. Even when individual seasons were interrupted by early exits or non-participation, later deep runs repeatedly reappeared.</p>
+<p>This makes longevity one of the central findings of the analysis. Djokovic did not merely continue entering Grand Slam tournaments as he aged; he continued reaching the rounds in which championships were decided.</p>
+<h4 id="performance-by-grand-slam-tournament">Performance by Grand Slam Tournament</h4>
+<p>The four Grand Slam tournaments differ in surface, environment, scheduling, weather, and historical playing conditions.</p>
+<ul>
+<li>Australian Open: hard court</li>
+<li>Roland Garros: clay</li>
+<li>Wimbledon: grass</li>
+<li>US Open: hard court</li>
+</ul>
+<p>The analysis examines whether Djokovic’s overall Grand Slam success is evenly distributed or concentrated at particular tournaments.</p>
+<h5 id="data-source-1">Data source</h5>
+<a href="https://www.kaggle.com/datasets/dissfya/atp-tennis-2000-2023daily-pull">
+  ATP match results on Kaggle
+</a>
+<p>Match win percentage is calculated as:</p>
+\[
+\text{Match win percentage} =
+\frac{\text{Matches won}}
+{\text{Matches played}}
+\times 100
+\]<p>Finals conversion percentage is calculated as:</p>
+\[
+\text{Finals conversion percentage} =
+\frac{\text{Titles won}}
+{\text{Finals reached}}
+\times 100
+\]<p>The first chart compares finals reached and titles won at each Grand Slam tournament.</p>
+<figure class="article-figure">
+  <img
+    src="/images/djokovic/finals-by-tournament.webp"
+    alt="Grand Slam finals reached and titles won by Novak Djokovic at each tournament"
+    loading="lazy"
+    decoding="async"
+  >
+
+  
+    <figcaption>
+      Figure 2. Grand Slam finals reached and titles won by tournament.
+    </figcaption>
+  
+</figure>
+<p>The chart separates two related but different achievements: reaching a final and converting that appearance into a championship.</p>
+<p>The Australian Open stands out as Djokovic’s strongest tournament in both dimensions. At the other majors, the gap between finals reached and titles won shows that sustained contention does not always lead to the same conversion rate.</p>
+<p>This distinction matters because a runner-up finish still represents six match victories and a complete run to the final. Finals reached therefore measure consistency at the highest level, while titles measure the final conversion of those opportunities.</p>
+<p>The second chart compares Djokovic’s match win percentage across the four tournaments.</p>
+<figure class="article-figure">
+  <img
+    src="/images/djokovic/win-rate-by-tournament.webp"
+    alt="Novak Djokovic&#39;s Grand Slam match win percentage by tournament"
+    loading="lazy"
+    decoding="async"
+  >
+
+  
+    <figcaption>
+      Figure 3. Djokovic’s Grand Slam match win percentage and underlying win–loss record at each tournament.
+    </figcaption>
+  
+</figure>
+<p>Match win percentage provides a broader view than titles alone because every round contributes to the calculation.</p>
+<p>The tournament comparison confirms that Djokovic’s success was not distributed evenly across the four majors. The Australian Open produced the strongest overall record, while the remaining tournaments still show consistently high win rates despite different surfaces and conditions.</p>
+<p>The comparison between the Australian Open and US Open is especially useful. Both are hard-court majors, yet their results are not identical, suggesting that surface alone cannot explain Djokovic’s tournament-specific performance.</p>
+<p>The third chart compares five-set performance at each tournament.</p>
+<figure class="article-figure">
+  <img
+    src="/images/djokovic/five-set-record-by-tournament.webp"
+    alt="Novak Djokovic&#39;s five-set match record by Grand Slam tournament"
+    loading="lazy"
+    decoding="async"
+  >
+
+  
+    <figcaption>
+      Figure 4. Djokovic’s completed five-set wins and losses by Grand Slam tournament. Percentages are shown with sample sizes.
+    </figcaption>
+  
+</figure>
+<p>Djokovic’s five-set record is strong across the included tournaments, but the number of five-set matches differs substantially by major.</p>
+<p>The percentages should therefore be interpreted together with the underlying match counts. A tournament with only a small number of five-set matches can produce a high or low percentage that is sensitive to one result.</p>
+<p>The chart is best read as evidence that Djokovic remained highly competitive when matches reached a deciding set, rather than as proof that one surface directly caused stronger endurance.</p>
+<h4 id="every-grand-slam-final">Every Grand Slam Final</h4>
+<p>This section examines every Grand Slam final reached by Djokovic through the end of 2025.</p>
+<h5 id="data-source-2">Data source</h5>
+<a href="https://www.kaggle.com/datasets/dissfya/atp-tennis-2000-2023daily-pull">
+  ATP match results on Kaggle
+</a>
+<h5 id="finals-by-opponent">Finals by Opponent</h5>
+<p>For each opponent, display:</p>
+<ul>
+<li>Finals won by Djokovic</li>
+<li>Finals lost by Djokovic</li>
+</ul>
+<figure class="article-figure">
+  <img
+    src="/images/djokovic/finals-by-opponent.webp"
+    alt="Novak Djokovic&#39;s Grand Slam final wins and losses by opponent"
+    loading="lazy"
+    decoding="async"
+  >
+
+  
+    <figcaption>
+      Figure 5. Djokovic’s Grand Slam final wins and losses against each opponent.
+    </figcaption>
+  
+</figure>
+<p>The final-opponent comparison shows that Djokovic’s championship record was shaped by a small number of repeated rivalries as well as several one-time final matchups.</p>
+<p>Roger Federer, Rafael Nadal, and Andy Murray account for many of the repeated meetings from Djokovic’s first dominant period, while later finals increasingly involved opponents from a younger generation.</p>
+<p>The balance of wins and losses also varies by rival. This demonstrates why total title counts alone cannot explain the competitive context in which those titles were won.</p>
+<h5 id="finals-timeline">Finals Timeline</h5>
+<figure class="article-figure">
+  <img
+    src="/images/djokovic/grand-slam-finals-timeline.webp"
+    alt="Timeline of Novak Djokovic&#39;s Grand Slam final appearances from 2005 through 2025"
+    loading="lazy"
+    decoding="async"
+  >
+
+  
+    <figcaption>
+      Figure 6. Djokovic’s Grand Slam final appearances by year and tournament, separated into championship and runner-up results.
+    </figcaption>
+  
+</figure>
+<p>The finals timeline shows that Djokovic’s championship opportunities were distributed across multiple career phases rather than concentrated in one short interval.</p>
+<p>Clusters of finals reveal periods of exceptional consistency, while later appearances demonstrate that he remained capable of reaching the final stage well beyond the age at which many players begin to decline.</p>
+<p>The figure also separates reaching the final from winning it. This makes it possible to see both sustained title contention and the conversion of those opportunities into championships.</p>
+<p>The analysis should distinguish between:</p>
+<ul>
+<li>Reaching finals frequently</li>
+<li>Converting finals into titles</li>
+<li>Performing against repeated rivals</li>
+<li>Sustaining final-level performance across different ages</li>
+</ul>
+<h4 id="the-clutch-factor">The Clutch Factor</h4>
+<p>“Clutch” refers to performance in situations where the score or match state carries unusually high consequences.</p>
+<p>Instead of relying on one subjective label, this section defines clutch performance through several observable Grand Slam indicators:</p>
+<ul>
+<li>Tie-break win percentage</li>
+<li>Deciding-set win percentage</li>
+<li>Five-set match win percentage</li>
+<li>Matches won after losing the first set</li>
+<li>Finals conversion percentage</li>
+<li>Break-point save percentage where data coverage is sufficient</li>
+</ul>
+<p>No single metric proves mental strength. The goal is to determine whether several pressure-related measures point in the same direction.</p>
+<h5 id="tie-break-win-percentage">Tie-Break Win Percentage</h5>
+<p>Tie-break win percentage is calculated as:</p>
+\[
+\text{Tie-break win percentage} =
+\frac{\text{Tie-breaks won}}
+{\text{Tie-breaks played}}
+\times 100
+\]<p>Tie-breaks were identified from recorded set scores.</p>
+<p>For example, a set recorded as <code>7-6</code> indicates that the set winner won the tie-break, while <code>6-7</code> indicates that the player lost the tie-break.</p>
+<h5 id="data-source-3">Data source</h5>
+<a href="https://www.kaggle.com/datasets/dissfya/atp-tennis-2000-2023daily-pull">
+  ATP match results on Kaggle
+</a>
+<figure class="article-figure">
+  <img
+    src="/images/djokovic/tiebreak-win-rate-by-era.webp"
+    alt="Novak Djokovic&#39;s Grand Slam tie-break win percentage by career era"
+    loading="lazy"
+    decoding="async"
+  >
+
+  
+    <figcaption>
+      Figure 7. Djokovic’s Grand Slam tie-break win percentage by career era, with the underlying record and sample size.
+    </figcaption>
+  
+</figure>
+<p>The tie-break comparison suggests that Djokovic’s success in close sets was not limited to one stage of his career.</p>
+<p>However, the percentages vary across periods, and the number of tie-breaks is not equal in every era. The result should therefore be interpreted as a career pattern rather than evidence that his pressure performance was perfectly stable.</p>
+<p>The broader conclusion is that Djokovic remained above an even tie-break record across substantial portions of his Grand Slam career. This supports the idea that his reputation for performing well in close score situations has a measurable basis.</p>
+<h5 id="deciding-set-performance">Deciding-Set Performance</h5>
+<p>A deciding set is the final possible set of a match.</p>
+<p>For a completed best-of-five Grand Slam match, this normally means the fifth set.</p>
+\[
+\text{Deciding-set win percentage} =
+\frac{\text{Deciding-set matches won}}
+{\text{Deciding-set matches played}}
+\times 100
+\]<p>The analysis separates completed five-set matches from retirements and walkovers.</p>
+<h5 id="five-set-performance">Five-Set Performance</h5>
+<p>Five-set win percentage is calculated as:</p>
+\[
+\text{Five-set win percentage} =
+\frac{\text{Five-set matches won}}
+{\text{Five-set matches played}}
+\times 100
+\]<p>The result should always be reported with the number of matches played.</p>
+<h5 id="comebacks-after-losing-the-first-set">Comebacks After Losing the First Set</h5>
+<p>A comeback is defined as a completed match in which Djokovic lost the first set but won the match.</p>
+\[
+\text{First-set comeback percentage} =
+\frac{\text{Matches won after losing the first set}}
+{\text{Matches in which the first set was lost}}
+\times 100
+\]<p>This measure captures resilience across the full match rather than only performance in a final set.</p>
+<h5 id="finals-conversion">Finals Conversion</h5>
+<p>Finals conversion percentage is:</p>
+\[
+\text{Finals conversion percentage} =
+\frac{\text{Grand Slam finals won}}
+{\text{Grand Slam finals played}}
+\times 100
+\]<h5 id="break-point-performance">Break-Point Performance</h5>
+<p>Break-point save percentage can be calculated where the relevant match-statistics columns are sufficiently complete.</p>
+\[
+\text{Break-point save percentage} =
+\frac{\text{Break points saved}}
+{\text{Break points faced}}
+\times 100
+\]<p>Break-point performance is not shown as a separate figure because the available match-level dataset does not provide sufficiently consistent coverage across the full study period.</p>
+<p>Including only the matches with available break-point statistics could create a biased comparison across tournaments or eras. For that reason, the metric is retained as a possible future extension rather than presented as a complete career result.</p>
+<h4 id="age-and-five-set-endurance">Age and Five-Set Endurance</h4>
+<p>Five-set matches are physically and mentally demanding, making them useful for studying endurance.</p>
+<p>Djokovic’s age at each tournament was calculated from his birth date and the recorded tournament date.</p>
+<p>Age groups:</p>
+<ul>
+<li>Under 24</li>
+<li>24–27</li>
+<li>28–31</li>
+<li>32–35</li>
+<li>36 and above</li>
+</ul>
+<h5 id="data-source-4">Data source</h5>
+<a href="https://www.kaggle.com/datasets/dissfya/atp-tennis-2000-2023daily-pull">
+  ATP match results on Kaggle
+</a>
+<p>For each age group, the analysis reports:</p>
+<ul>
+<li>Five-set matches played</li>
+<li>Five-set wins</li>
+<li>Five-set losses</li>
+<li>Five-set win percentage</li>
+<li>Average opponent ranking</li>
+<li>Median opponent ranking</li>
+<li>Next-round win percentage</li>
+<li>Match duration where available</li>
+</ul>
+<figure class="article-figure">
+  <img
+    src="/images/djokovic/five-set-record-by-age.webp"
+    alt="Novak Djokovic&#39;s five-set Grand Slam record by age group"
+    loading="lazy"
+    decoding="async"
+  >
+
+  
+    <figcaption>
+      Figure 8. Djokovic’s completed five-set wins and losses by age group. Labels report win percentage and sample size.
+    </figcaption>
+  
+</figure>
+<p>The age-group comparison does not show a simple, uninterrupted decline in five-set performance.</p>
+<p>Djokovic continued to win a high proportion of long matches into his thirties. The later age groups, however, contain fewer observations, which means their percentages are more sensitive to individual matches.</p>
+<p>The evidence therefore supports a cautious conclusion: Djokovic retained strong five-set ability at an advanced tennis age, but the smaller late-career sample does not prove that endurance remained completely unchanged.</p>
+<h5 id="recovery-after-five-set-matches">Recovery After Five-Set Matches</h5>
+<p>Compare:</p>
+<ul>
+<li>Next-round win percentage after a straight-set match</li>
+<li>Next-round win percentage after a four-set match</li>
+<li>Next-round win percentage after a five-set match</li>
+</ul>
+<p>Only matches followed by another round in the same tournament should be included.</p>
+<p>A player who wins a final has no next-round observation, so final matches must be excluded from this calculation.</p>
+<figure class="article-figure">
+  <img
+    src="/images/djokovic/recovery-next-round.webp"
+    alt="Novak Djokovic&#39;s next-round win percentage after three-set, four-set, and five-set victories"
+    loading="lazy"
+    decoding="async"
+  >
+
+  
+    <figcaption>
+      Figure 9. Djokovic’s next-round win percentage after victories lasting three, four, or five sets. Finals are excluded because no following round exists.
+    </figcaption>
+  
+</figure>
+<p>The next-round results remain strong after victories of different lengths, including matches that lasted five sets.</p>
+<p>A longer match does not appear to eliminate Djokovic’s ability to win the following round. Nevertheless, this comparison should not be interpreted as a controlled estimate of fatigue.</p>
+<p>Five-set matches often occur against stronger opponents or later in a tournament, and the next opponent may also be more difficult. The chart therefore shows an association between previous match length and the next result rather than a causal effect.</p>
+<h5 id="age-and-match-duration">Age and Match Duration</h5>
+<p>If match-duration coverage is sufficiently complete, use a scatter chart with:</p>
+<ul>
+<li>Djokovic’s age on the horizontal axis</li>
+<li>Match duration in minutes on the vertical axis</li>
+<li>Match result represented by marker type</li>
+</ul>
+<p>A match-duration figure is not included because duration coverage is not sufficiently complete and consistent across the full study period.</p>
+<p>Sets played are therefore used as the primary available measure of match length. This is less precise than minutes played, but it avoids comparing eras using unevenly available duration data.</p>
+<h4 id="performance-against-elite-opponents">Performance Against Elite Opponents</h4>
+<p>Djokovic’s Grand Slam results can be separated by opponent ranking at the time of the match.</p>
+<p>Opponent-ranking groups:</p>
+<ul>
+<li>Ranked 1–5</li>
+<li>Ranked 6–10</li>
+<li>Ranked 11–20</li>
+<li>Ranked 21–50</li>
+<li>Ranked outside the top 50</li>
+<li>Ranking unavailable</li>
+</ul>
+<p>The ranking-unavailable group should not be silently included in another category.</p>
+<h5 id="data-source-5">Data source</h5>
+<a href="https://www.kaggle.com/datasets/dissfya/atp-tennis-2000-2023daily-pull">
+  ATP match results on Kaggle
+</a>
+<p>For each ranking group, calculate:</p>
+<ul>
+<li>Matches played</li>
+<li>Matches won</li>
+<li>Match win percentage</li>
+<li>Five-set matches played</li>
+<li>Five-set win percentage</li>
+<li>Finals played</li>
+<li>Finals won</li>
+<li>Straight-set win percentage</li>
+</ul>
+<figure class="article-figure">
+  <img
+    src="/images/djokovic/win-rate-by-opponent-ranking.webp"
+    alt="Novak Djokovic&#39;s Grand Slam match win percentage by opponent-ranking group"
+    loading="lazy"
+    decoding="async"
+  >
+
+  
+    <figcaption>
+      Figure 10. Djokovic’s Grand Slam match win percentage by the opponent’s ranking at the time of the match.
+    </figcaption>
+  
+</figure>
+<p>The ranking-group comparison shows the expected relationship between opponent strength and match outcome: Djokovic’s win percentage declines as the opponent group becomes stronger.</p>
+<p>The important result is that his record remains highly competitive even against top-ranked opponents. His overall Grand Slam success therefore cannot be explained only by victories over lower-ranked players.</p>
+<p>At the same time, the number of matches is much larger in the lower-ranked groups. Displaying the sample sizes prevents the top-five record from being compared with the broader career total without context.</p>
+<h5 id="selected-rival-comparison">Selected Rival Comparison</h5>
+<p>Compare Djokovic’s Grand Slam record against:</p>
+<ul>
+<li>Roger Federer</li>
+<li>Rafael Nadal</li>
+<li>Andy Murray</li>
+<li>Stan Wawrinka</li>
+<li>Daniil Medvedev</li>
+<li>Carlos Alcaraz</li>
+<li>Jannik Sinner</li>
+</ul>
+<figure class="article-figure">
+  <img
+    src="/images/djokovic/selected-rival-record.webp"
+    alt="Novak Djokovic&#39;s Grand Slam match record against selected elite opponents"
+    loading="lazy"
+    decoding="async"
+  >
+
+  
+    <figcaption>
+      Figure 11. Djokovic’s Grand Slam match record against selected rivals. The dashed reference line represents an even 50% record.
+    </figcaption>
+  
+</figure>
+<p>The selected-rival comparison adds information that ranking groups cannot capture.</p>
+<p>Djokovic’s records differ by opponent, reflecting the importance of individual matchup styles, tournament surfaces, and the stage of his career in which each rivalry occurred.</p>
+<p>The figure also links different generations. Federer, Nadal, Murray, and Wawrinka shaped Djokovic’s earlier championship years, while Medvedev, Alcaraz, and Sinner became increasingly important in the later period.</p>
+<h4 id="career-evolution-across-grand-slam-eras">Career Evolution Across Grand Slam Eras</h4>
+<p>Djokovic’s Grand Slam career is separated into four periods.</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">Career period</th>
+					<th style="text-align: left">Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">2005–2010</td>
+					<td style="text-align: left">Early career and first Grand Slam title</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">2011–2016</td>
+					<td style="text-align: left">First dominant period</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">2017–2020</td>
+					<td style="text-align: left">Injury-disrupted period and return to dominance</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">2021–2025</td>
+					<td style="text-align: left">Late-career dominance and transition</td>
+			</tr>
+	</tbody>
+</table>
+<p>The periods are based on identifiable changes in results and career context rather than equal-length intervals.</p>
+<p>Combining 2017 with the following recovery years avoids presenting a one-season percentage as directly comparable with much larger periods.</p>
+<h5 id="data-source-6">Data source</h5>
+<a href="https://www.kaggle.com/datasets/dissfya/atp-tennis-2000-2023daily-pull">
+  ATP match results on Kaggle
+</a>
+<figure class="article-figure">
+  <img
+    src="/images/djokovic/win-rate-by-era.webp"
+    alt="Novak Djokovic&#39;s Grand Slam match win percentage by career era"
+    loading="lazy"
+    decoding="async"
+  >
+
+  
+    <figcaption>
+      Figure 12. Djokovic’s Grand Slam match win percentage across four career phases, with the underlying win–loss record and sample size.
+    </figcaption>
+  
+</figure>
+<p>The career-era comparison shows the transition from Djokovic’s early development into his first dominant period, followed by recovery and continued late-career success.</p>
+<p>The highest win rates occur after the early-career phase, but the later periods remain close enough to show that aging did not produce an immediate collapse in Grand Slam performance.</p>
+<p>This is one of the clearest demonstrations of longevity in the analysis. Djokovic’s later success was not based only on isolated titles; it was supported by a consistently high match win percentage.</p>
+<figure class="article-figure">
+  <img
+    src="/images/djokovic/pressure-performance-by-era.webp"
+    alt="Novak Djokovic&#39;s tie-break, five-set, and first-set comeback performance by career era"
+    loading="lazy"
+    decoding="async"
+  >
+
+  
+    <figcaption>
+      Figure 13. Three measures of pressure performance by career era: tie-breaks, completed five-set matches, and matches won after losing the first set.
+    </figcaption>
+  
+</figure>
+<p>The three pressure indicators do not move in exactly the same direction.</p>
+<p>A period can contain a particularly strong tie-break record without producing the highest five-set or comeback percentage. This shows that “clutch” is not one single measurable trait.</p>
+<p>The most defensible conclusion comes from patterns that appear across several indicators. Djokovic’s record remains strong in multiple pressure situations, but the magnitude of that advantage changes by era and sample size.</p>
+<h4 id="match-dominance-beyond-wins-and-losses">Match Dominance Beyond Wins and Losses</h4>
+<p>Winning percentage alone does not show how completely a player controlled a match.</p>
+<p>This section therefore examines whether Djokovic’s victories became more or less dominant across different stages of his Grand Slam career.</p>
+<h5 id="data-source-7">Data source</h5>
+<a href="https://www.kaggle.com/datasets/dissfya/atp-tennis-2000-2023daily-pull">
+  ATP match results on Kaggle
+</a>
+<p>The analysis considers:</p>
+<ul>
+<li>Straight-set win percentage</li>
+<li>Sets won percentage</li>
+<li>Average sets lost per victory</li>
+<li>Games won percentage where score parsing is reliable</li>
+<li>Match duration where available</li>
+<li>Dominance against different opponent-ranking groups</li>
+</ul>
+<p>Straight-set win percentage is calculated as:</p>
+\[
+\text{Straight-set win percentage} =
+\frac{\text{Straight-set victories}}
+{\text{Completed victories}}
+\times 100
+\]<p>Sets won percentage is calculated as:</p>
+\[
+\text{Sets won percentage} =
+\frac{\text{Sets won}}
+{\text{Sets played}}
+\times 100
+\]<p>Average sets lost per victory is:</p>
+\[
+\text{Average sets lost per victory} =
+\frac{\text{Sets lost in victories}}
+{\text{Completed victories}}
+\]<p>Lower average sets lost per victory indicates more dominant wins.</p>
+<figure class="article-figure">
+  <img
+    src="/images/djokovic/straight-set-win-rate-by-era.webp"
+    alt="Share of Novak Djokovic&#39;s Grand Slam victories completed in straight sets by career era"
+    loading="lazy"
+    decoding="async"
+  >
+
+  
+    <figcaption>
+      Figure 14. The percentage of Djokovic’s Grand Slam victories completed without losing a set in each career era.
+    </figcaption>
+  
+</figure>
+<p>Straight-set victories measure a different form of dominance from match win percentage.</p>
+<p>A high straight-set share indicates that many wins were completed without requiring an extended match. Differences across eras can therefore reveal whether Djokovic’s success became more or less efficient over time.</p>
+<p>The result should still be interpreted in context. A period containing more late-round matches may naturally include stronger opponents and fewer straight-set victories.</p>
+<figure class="article-figure">
+  <img
+    src="/images/djokovic/sets-lost-per-victory-by-era.webp"
+    alt="Average sets lost per Novak Djokovic Grand Slam victory by career era"
+    loading="lazy"
+    decoding="async"
+  >
+
+  
+    <figcaption>
+      Figure 15. Average sets lost per completed Grand Slam victory by career era. Lower values indicate more efficient wins.
+    </figcaption>
+  
+</figure>
+<p>Average sets lost provides a continuous measure that complements the straight-set percentage.</p>
+<p>Two periods can have similar straight-set rates while differing in how often the remaining victories require four or five sets. Lower average sets lost therefore indicates that Djokovic generally completed victories more efficiently.</p>
+<p>Taken together, Figures 14 and 15 distinguish between winning frequently and winning decisively.</p>
+<h3 id="future-research">Future Research</h3>
+<p>Point-level leverage, rally construction, shot selection, and crowd-response effects require separate datasets.</p>
+<p>The Match Charting Project can support selected-match analyses of:</p>
+<ul>
+<li>Rally length</li>
+<li>Serve direction</li>
+<li>Return depth</li>
+<li>Winners and errors</li>
+<li>Shot selection</li>
+<li>Net approaches</li>
+</ul>
+<p>However, its matches are contributor-selected rather than a complete record of Djokovic’s Grand Slam career. Mixing those observations with the complete match-level dataset would create inconsistent sample coverage.</p>
+<p>A separate article could therefore examine:</p>
+<blockquote>
+<p>How Djokovic Wins Rallies: A Match Charting Project Analysis</p>
+</blockquote>
+<p>The crowd-hostility question requires manually synchronized:</p>
+<ul>
+<li>Match video</li>
+<li>Broadcast audio</li>
+<li>Score timestamps</li>
+<li>Crowd-reaction labels</li>
+<li>Multiple independent annotators</li>
+</ul>
+<p>Any observed relationship between crowd hostility and subsequent performance would need to be described as an association, not proof that booing causes improved performance.</p>
+<h3 id="limitations">Limitations</h3>
+<p>This analysis has several limitations:</p>
+<ul>
+<li>Match-result data may use inconsistent tournament names.</li>
+<li>Retirements and walkovers require separate treatment.</li>
+<li>Final-set tie-break formats changed during the study period.</li>
+<li>Some opponent rankings may be missing.</li>
+<li>Match-duration coverage may be incomplete.</li>
+<li>Serve and break-point statistics may be missing for some matches.</li>
+<li>Tie-break extraction depends on reliable score parsing.</li>
+<li>A five-set match is not automatically equivalent to a high-quality or high-pressure match.</li>
+<li>Career-era comparisons use unequal sample sizes.</li>
+<li>The four career periods contain unequal numbers of matches.</li>
+<li>Correlation does not prove causation.</li>
+<li>Small samples can produce unstable percentages.</li>
+<li>Aggregate validation websites may use different filtering rules from this analysis.</li>
+</ul>
+<p>Every final figure should therefore include:</p>
+<ul>
+<li>Sample size</li>
+<li>Date coverage</li>
+<li>Missing-data treatment</li>
+<li>Exclusion rules</li>
+<li>Metric definition</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>A meaningful analysis of Novak Djokovic’s Grand Slam career should not rely on one statistic.</p>
+<p>The strongest evidence comes from combining:</p>
+<ul>
+<li>Grand Slam career results</li>
+<li>Tournament-specific performance</li>
+<li>Grand Slam final outcomes</li>
+<li>Tie-break performance</li>
+<li>Five-set endurance</li>
+<li>Age-related changes</li>
+<li>Results against elite opponents</li>
+<li>Career-era comparisons</li>
+<li>Straight-set performance</li>
+<li>Match-dominance measures</li>
+</ul>
+<p>Some findings may confirm familiar narratives, such as Djokovic’s consistency and resilience under pressure. Others may reveal that the answer depends on tournament, age, opponent strength, or the metric used.</p>
+<p>The goal is not to produce a single mathematical answer to the GOAT debate. It is to show which aspects of Djokovic’s Grand Slam dominance can be measured, which conclusions are supported by consistent patterns, and which claims remain dependent on incomplete or subjective evidence.</p>
+<p>The final figures combine tournament outcomes, match records, score-derived pressure measures, opponent strength, and career-era comparisons. They should be interpreted together with the sample sizes and limitations reported throughout the article.</p>
+
+  </article>
+
+
+    </main>
+
+    <footer class="border-top">
+      <div class="row">
+        <div
+          class="d-inline-flex justify-content-between align-items-end"
+        >
+          <div>
+            <a
+              id="theme-toggle"
+              onclick="toggleTheme()"
+              style="cursor: pointer; transition: none;"
+              aria-label="Toggle dark mode"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-circle-half"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+              >
+                <path
+                  d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'],
+          ['\\(', '\\)']
+        ],
+        displayMath: [
+          ['$$', '$$'],
+          ['\\[', '\\]']
+        ]
+      },
+
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    id="MathJax-script"
+    async
+  ></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tocLinks = document.querySelectorAll(
+        '#table-of-contents nav > ul > li > a'
+      );
+
+      tocLinks.forEach((link) => {
+        const normalizedText = link.textContent
+          .trim()
+          .toLowerCase();
+
+        const href = link.getAttribute('href');
+
+        if (
+          normalizedText === 'data analyses' ||
+          href === '#data-analyses'
+        ) {
+          const listItem = link.closest('li');
+
+          if (listItem) {
+            listItem.classList.add('data-analyses-entry');
+          }
+        }
+      });
+
+      document.querySelectorAll('table').forEach((table) => {
+        const parent = table.parentElement;
+
+        if (
+          parent &&
+          !parent.classList.contains('article-table-wrapper')
+        ) {
+          const wrapper = document.createElement('div');
+          wrapper.className = 'article-table-wrapper';
+
+          table.parentNode.insertBefore(wrapper, table);
+          wrapper.appendChild(table);
+        }
+      });
+
+      document.querySelectorAll('a').forEach((link) => {
+        if (
+          link.hostname &&
+          link.hostname !== window.location.hostname
+        ) {
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,2674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1"
+  >
+
+  <meta name="robots" content="max-image-preview:large">
+
+  <title>Eagles | My Music Archive</title>
+
+  <meta
+    name="description"
+    content="The Eagles are the band I return to when I want music that feels like a perfectly crafted story wrapped in a California sunset. Even when I am only listening, their flawless vocal harmonies and cinematic storytelling make the whole atmosphere of the West Coast feel completely present.
+"
+  >
+
+  <link rel="canonical" href="https://Ruby-0218.github.io/music/eagles/">
+
+  <meta property="og:title" content="Eagles">
+
+  <meta
+    property="og:description"
+    content="The Eagles are the band I return to when I want music that feels like a perfectly crafted story wrapped in a California sunset. Even when I am only listening, their flawless vocal harmonies and cinematic storytelling make the whole atmosphere of the West Coast feel completely present.
+"
+  >
+
+  <meta property="og:url" content="https://Ruby-0218.github.io/music/eagles/">
+  <meta property="og:site_name" content="Ju-Ting Sun">
+  <meta property="og:type" content="article">
+
+  
+    
+      <meta property="og:image" content="https://Ruby-0218.github.io/images/music/artists/eagles.jpg">
+    
+  
+
+  <link
+    rel="stylesheet"
+    href="https://whycoffee.blog/assets/lib/bootstrap-5.3.3/bootstrap.min.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://whycoffee.blog/assets/css/styles.css"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <script src="https://whycoffee.blog/assets/js/theme-handler.js"></script>
+
+  <style>
+    :root {
+      --music-bg: #ffffff;
+      --music-surface: #f7f7f5;
+      --music-text: #111111;
+      --music-muted: #7d7d7d;
+      --music-border: #d8d8d5;
+      --music-soft-border: #ececea;
+      --music-hover: #f0f1ed;
+      --music-accent: #9da79f;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--music-bg);
+      color: var(--music-text);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .artist-header-link,
+    .artist-header-link:visited,
+    .artist-header-link:hover,
+    .artist-header-link:active {
+      color: #111111 !important;
+    }
+
+    .artist-page {
+      width: 100%;
+    }
+
+    .artist-title-block {
+      margin-bottom: 3rem;
+    }
+
+    .artist-kicker {
+      margin: 0 0 0.75rem;
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .artist-title {
+      margin: 0;
+      color: var(--music-text);
+      font-family: inherit;
+      font-size: clamp(2.7rem, 6vw, 5.2rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+
+    .artist-label {
+      max-width: 700px;
+      margin: 1.25rem 0 0;
+      color: var(--music-muted);
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      line-height: 1.6;
+    }
+
+    .artist-metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--music-border);
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .artist-hero {
+      margin: 3rem 0 1rem;
+    }
+
+    .artist-hero-frame {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border: 1px solid var(--music-soft-border);
+      background: var(--music-surface);
+    }
+
+    .artist-hero-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .artist-hero-placeholder {
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .image-credit {
+      margin: 0.65rem 0 0;
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.6rem;
+      line-height: 1.6;
+    }
+
+    .image-credit a,
+    .image-credit a:visited {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
+
+    .artist-introduction {
+      max-width: 760px;
+      margin: 4rem 0;
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+
+    .artist-introduction p {
+      margin: 0 0 1.35rem;
+    }
+
+    .artist-summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border-top: 1px solid var(--music-border);
+      border-bottom: 1px solid var(--music-border);
+    }
+
+    .summary-item {
+      min-width: 0;
+      padding: 1.25rem 1rem 1.25rem 0;
+    }
+
+    .summary-item + .summary-item {
+      padding-left: 1rem;
+      border-left: 1px solid var(--music-border);
+    }
+
+    .summary-label {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .summary-value {
+      display: block;
+      color: var(--music-text);
+      font-size: 1.05rem;
+      line-height: 1.4;
+    }
+
+    .songs-section {
+      padding: 5rem 0 6rem;
+    }
+
+    .songs-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .songs-heading h2 {
+      margin: 0;
+      color: var(--music-text);
+      font-family: inherit;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+    }
+
+    .songs-heading p {
+      max-width: 360px;
+      margin: 0;
+      color: var(--music-muted);
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    .song-list {
+      border-top: 1px solid var(--music-text);
+    }
+
+    .song-item {
+      border-bottom: 1px solid var(--music-soft-border);
+    }
+
+    .song-summary {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr) auto 28px;
+      gap: 1rem;
+      align-items: center;
+      width: 100%;
+      padding: 1.25rem 0;
+      border: 0;
+      background: transparent;
+      color: var(--music-text);
+      text-align: left;
+      cursor: pointer;
+      transition: background-color 180ms ease;
+    }
+
+    .song-summary:hover {
+      background: var(--music-hover);
+    }
+
+    .song-number {
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+    }
+
+    .song-main {
+      min-width: 0;
+    }
+
+    .song-title {
+      display: block;
+      margin: 0;
+      overflow: hidden;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.35;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .song-subtitle {
+      display: block;
+      margin: 0.3rem 0 0;
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.63rem;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .song-score {
+      min-width: 52px;
+      font-family: "DM Mono", monospace;
+      font-size: 0.75rem;
+      text-align: right;
+    }
+
+    .song-toggle-icon {
+      display: inline-block;
+      font-size: 1.2rem;
+      font-weight: 300;
+      text-align: center;
+      transition: transform 180ms ease;
+    }
+
+    .song-item.is-open .song-toggle-icon {
+      transform: rotate(45deg);
+    }
+
+    .song-details {
+      display: none;
+      padding: 0 0 2rem 60px;
+    }
+
+    .song-item.is-open .song-details {
+      display: block;
+    }
+
+    .song-detail-layout {
+      display: grid;
+      grid-template-columns: minmax(160px, 220px) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .song-media-column {
+      min-width: 0;
+    }
+
+    .song-artwork {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border: 1px solid var(--music-soft-border);
+      background: var(--music-surface);
+    }
+
+    .song-artwork img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .song-artwork-placeholder {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .watch-mv-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      width: 100%;
+      margin-top: 0.75rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--music-text);
+      background: var(--music-text);
+      color: #ffffff !important;
+      font-family: "DM Mono", monospace;
+      font-size: 0.66rem;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition:
+        background-color 180ms ease,
+        color 180ms ease;
+    }
+
+    .watch-mv-link:hover {
+      background: #ffffff;
+      color: var(--music-text) !important;
+    }
+
+    .song-facts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .song-fact {
+      min-width: 0;
+    }
+
+    .song-fact.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .fact-label {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.61rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .fact-value {
+      margin: 0;
+      color: var(--music-text);
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    .fun-fact-content p {
+        margin: 0 0 1rem;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .fun-fact-content p:last-child {
+        margin-bottom: 0;
+    }
+
+    .fun-fact-content blockquote {
+        margin: 1.25rem 0;
+        padding-left: 1rem;
+        border-left: 2px solid var(--music-text);
+        color: var(--music-text);
+        font-style: italic;
+    }
+
+    .score-line {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .score-track {
+      position: relative;
+      flex: 1;
+      height: 3px;
+      overflow: hidden;
+      background: var(--music-border);
+    }
+
+    .score-fill {
+      height: 100%;
+      background: var(--music-text);
+    }
+
+    .back-section {
+      padding: 2rem 0 6rem;
+      border-top: 1px solid var(--music-soft-border);
+    }
+
+    .back-link,
+    .back-link:visited {
+      color: var(--music-text);
+      font-size: 0.9rem;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    .artist-footer {
+      padding: 2rem 0 1rem;
+      border-top: 1px solid var(--music-border);
+      color: var(--music-muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+    }
+
+    @media (max-width: 767.98px) {
+      .artist-title-block {
+        margin-bottom: 2.5rem;
+      }
+
+      .artist-summary {
+        grid-template-columns: 1fr;
+      }
+
+      .summary-item {
+        padding: 1rem 0;
+      }
+
+      .summary-item + .summary-item {
+        padding-left: 0;
+        border-top: 1px solid var(--music-border);
+        border-left: 0;
+      }
+
+      .songs-heading {
+        display: block;
+      }
+
+      .songs-heading p {
+        margin-top: 0.8rem;
+      }
+
+      .song-summary {
+        grid-template-columns: 34px minmax(0, 1fr) auto 24px;
+        gap: 0.65rem;
+      }
+
+      .song-details {
+        padding-left: 0;
+      }
+
+      .song-detail-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .song-artwork {
+        max-width: 250px;
+      }
+
+      .watch-mv-link {
+        max-width: 250px;
+      }
+
+      .song-facts {
+        grid-template-columns: 1fr;
+      }
+
+      .song-fact.full-width {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .song-score {
+        min-width: 42px;
+      }
+
+      .song-title {
+        font-size: 0.92rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .song-toggle-icon {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="col-lg-8 mx-auto p-3 pb-5 pb-md-6 pt-md-6">
+
+    <header class="d-flex flex-row mb-8">
+      <nav class="mt-0">
+        <a
+          href="/"
+          class="text-decoration-none artist-header-link"
+        >
+          <span style="letter-spacing: 0.02em;">
+            Ju-Ting Sun
+          </span>
+        </a>
+      </nav>
+
+      <nav class="d-inline-flex ms-auto">
+        
+          <a
+            href="/music/"
+            class="text-decoration-none ms-3 artist-header-link"
+          >
+            <span>back to music</span>
+          </a>
+        
+      </nav>
+    </header>
+
+    <main class="col-md-12 mb-8 artist-page">
+
+      <section class="artist-title-block">
+        <p class="artist-kicker">
+          
+            
+              Band &amp; group
+            
+          
+        </p>
+
+        <h1 class="artist-title">
+          Eagles
+        </h1>
+
+        
+          <p class="artist-label">
+            The Kings of California Rock
+          </p>
+        
+
+        <div class="artist-metadata">
+          
+            <span>1971–present</span>
+          
+
+          
+            <span>Los Angeles, California, United States</span>
+          
+
+          
+            <span>Rock · Country Rock · Soft Rock</span>
+          
+        </div>
+      </section>
+
+      <figure class="artist-hero">
+        <div class="artist-hero-frame">
+          
+            
+              <img
+                src="/images/music/artists/eagles.jpg"
+                alt="Eagles"
+                style="object-position: center 25%;"
+              >
+            
+          
+        </div>
+
+        
+          <figcaption class="image-credit">
+            
+              Unknown Photographer / Promotional Photo
+            
+
+            
+              · Sourced via Pinterest
+            
+
+            
+              · Fair Use (Non-commercial)
+            
+
+            
+              ·
+              <a
+                href="https://pin.it/AGJDn0KSa"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                source
+              </a>
+            
+          </figcaption>
+        
+      </figure>
+
+      <section class="artist-introduction">
+        
+          <p>The Eagles are the band I return to when I want music that feels like a perfectly crafted story wrapped in a California sunset. Even when I am only listening, their flawless vocal harmonies and cinematic storytelling make the whole atmosphere of the West Coast feel completely present.
+</p>
+        
+
+        <p>The Eagles are, without a doubt, my absolute favorite band. Even though their behind-the-scenes relationships were far from perfect - Don Felder even had a bitter legal battle with them, and they fully embraced the wild, reckless chaos of the 70s hippie era, with Don Henley and Glenn Frey often ruling the group with an iron fist, none of that changes how deeply I love their music and style.</p>
+<p>It is fascinating how a band living such an untamed, rebellious lifestyle could write such incredibly delicate, meticulous lyrics. Their performances are simply flawless; from every specific tone and pitch to their overall presence, it is all crafted to absolute perfection. Diving deep into their intense, dramatic history has only made me appreciate their artistry even more. They were walking contradictions, but they were absolute musical geniuses, without a single doubt.</p>
+
+      </section>
+
+      
+      
+
+      
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+      
+
+      
+        
+      
+
+      <section class="artist-summary">
+        <div class="summary-item">
+          <span class="summary-label">
+            Selected songs
+          </span>
+
+          <span class="summary-value">
+            12
+          </span>
+        </div>
+
+        <div class="summary-item">
+          <span class="summary-label">
+            Average score
+          </span>
+
+          <span class="summary-value">
+            
+              8.7 / 10
+            
+          </span>
+        </div>
+
+        <div class="summary-item">
+          <span class="summary-label">
+            Archive label
+          </span>
+
+          <span class="summary-value">
+            
+              The Kings of California Rock
+            
+          </span>
+        </div>
+      </section>
+
+      <section class="songs-section">
+        <div class="songs-heading">
+          <h2>Selected songs</h2>
+
+          <p>
+            Open a track to see its score, listening context,
+            recognition, fun fact, and music-video link.
+          </p>
+        </div>
+
+        <div class="song-list">
+          
+
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    01
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Try and Love Again
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Hotel California
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1976
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    9.5
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/eagles-hotel.jpg"
+                            alt="Artwork for Try and Love Again"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/_0A7UXFPxS8?si=yqeWPGgp8QO_7l_U"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 95%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            9.5
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            The ultimate hidden gem
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            There is this music account on Instagram asking people about their favorite song of all time, and one girl mentioned this track. Huge thanks to her for the recommendation!
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            Anytime, anywhere. I just purely love this song.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>While Don Henley and Glenn Frey were the main voices of the band, this masterpiece was actually written and sung by their original bass player, Randy Meisner.</p>
+<p>It is beautifully unique because it is the only song on the legendary Hotel California album where neither Henley nor Frey sings the lead vocal. Meisner&rsquo;s voice gives it a softer, incredibly hopeful and emotional texture.</p>
+<p>Sadly, the pressure of fame and touring got to Meisner shortly after the album was released. He ended up leaving the Eagles right after the Hotel California tour, making this track his beautiful farewell gift to the band.</p>
+<p><strong>Lesson learned: You can literally sing the best hidden gem on a legendary album and still decide you just want to pack up and go home ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    02
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Waiting in the Weeds
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Long Road Out of Eden
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        2007
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    9.1
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/eagles-eden.jpg"
+                            alt="Artwork for Waiting in the Weeds"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/H0YckyGu7jg?si=wFuOTZmrFg-7tB6d"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 91%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            9.1
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            A modern lyrical masterpiece
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Exploring their later comeback albums.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            When your class is off, you are on your way home, and the world just feels quiet.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>This track comes from their 2007 comeback album, released decades after their 70s prime. It is a deeply reflective song mostly penned by Don Henley, moving away from the wild rockstar lifestyle.</p>
+<p>The lyrics use the metaphor of a garden and the changing seasons to talk about aging, patience, and finding peace. It is about watching time pass by and waiting for your moment to bloom again, even when others have forgotten you.</p>
+<p>It is incredibly moving to hear these guys, who used to write about fast cars and wild hotel parties, singing so beautifully about the quiet acceptance of growing older.</p>
+<p><strong>Lesson learned: It takes a few decades of wild rock star drama to finally write a peaceful song about just hanging out in a garden ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    03
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Hole in the World
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        The Very Best Of
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        2003
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    9.1
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/eagles-to%20the%20limit.jpg"
+                            alt="Artwork for Hole in the World"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/9-NWi0LPo1w?si=3cFuttTTopc3zG6a"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 91%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            9.1
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            A powerful tribute
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Watching their live concert on YouTube. Seeing the four of them just play guitars and sing this together immediately gave me a feeling of peace and love.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            When the news gets too heavy and you just need a moment of grounding harmony.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>This song was specifically written by Don Henley in response to the tragic events of September 11, 2001. He wanted to capture the collective sense of loss and sorrow that the entire world was feeling.</p>
+<p>To make the message as pure as possible, the band decided to record it with absolutely no drum track. The entire arrangement relies on their signature four-part vocal harmonies and simple acoustic guitars.</p>
+<p>By stripping away the heavy rock production, they returned to their roots, offering a song that feels less like a commercial track and more like a healing prayer.</p>
+<p><strong>Lesson learned: When the world feels broken, sometimes four guys singing in perfect harmony is the best medicine ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    04
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Hotel California
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Hotel California
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1976
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    8.9
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/eagles-hotel.jpg"
+                            alt="Artwork for Hotel California"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/09839DpTctU?si=tkuuSKlB4odYla_c"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 89%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            8.9
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Global classic &amp; rock masterpiece
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            It is just so universally iconic that I don&#39;t even remember the first time I heard it. It feels like it has just always been a part of my life.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            Cruising down a desert highway at dusk, or when you get high and soak in that mysterious West Coast vibe.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>The creation of this legendary track started on a beach. Guitarist Don Felder was just messing around with a 12-string acoustic guitar when he came up with the chord progression. He recorded a demo, gave it to Don Henley and Glenn Frey, and they jokingly called it &ldquo;Mexican Reggae&rdquo; before writing those famous, mysterious lyrics about the dark side of the LA music industry.</p>
+<p>The most famous part of the song, of course, is that mind-blowing guitar duel at the end between Felder and Joe Walsh. Felder actually recorded several different guitar parts, and Henley specifically picked the one we hear today, piecing together the ultimate solo.</p>
+<p>Ironically, despite writing the most iconic music in the band&rsquo;s history, Felder later had massive personal and legal fights with the two core members, Don and Glenn, which eventually led to him being dramatically fired from the band.</p>
+<p><strong>Lesson learned: If you are going to write the most famous guitar solo in rock history, maybe try not to get fired by your own bandmates later ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    05
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Desperado
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Desperado
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1973
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    8.9
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/eagles-desperado.jpg"
+                            alt="Artwork for Desperado"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/FiPqUjLMuA8?si=anZ5T2tGVeWXtWC_"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 89%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            8.9
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            One of the greatest ballads of all time
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Not exactly sure, but probably when I was exploring all their albums to research their songwriting history.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            Late at night when you are feeling a bit lonely and just need a good, emotional moment to yourself.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>This is actually the very first song that the legendary duo of Don Henley and Glenn Frey ever wrote together. Henley had been holding onto the unfinished melody since 1968, long before the Eagles even existed.</p>
+<p>The lyrics use the metaphor of a cowboy out in the Old West who refuses to fall in love and insists on riding alone. It is a brilliant way of talking about young rock stars who were too stubborn or afraid to commit to a real relationship.</p>
+<p>What makes the recording so special is how stripped down it is. Don Henley sings it with such raw, solitary emotion, accompanied mostly by a simple piano, making it feel incredibly intimate compared to their big rock anthems.</p>
+<p><strong>Lesson learned: Sometimes the most beautiful love songs are written about outlaws who refuse to love at all ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    06
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Take It Easy
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Eagles
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1972
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    8.9
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/eagles-easy.jpg"
+                            alt="Artwork for Take It Easy"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/AaBw37-nWaY?si=5nw2Gcg8k52rZkeH"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 89%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            8.9
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            The song that started it all
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Not sure, but the chorus is so catchy that I instantly really liked it.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            A sunny weekend road trip with the windows completely rolled down.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>This iconic track was the very first single the Eagles ever released, and it actually started as an unfinished song by singer-songwriter Jackson Browne.</p>
+<p>Browne was living in an apartment below Glenn Frey and got completely stuck on the second verse. Frey heard him struggling through the floorboards, stepped in, and helped finish the famous line: &ldquo;Standin&rsquo; on a corner in Winslow, Arizona.&rdquo;</p>
+<p>That small neighborly collaboration not only gave the Eagles their debut hit but also basically defined the entire laid-back Southern California rock sound for a decade.</p>
+<p><strong>Lesson learned: Always be nice to your neighbors, they might just help you write your first massive hit ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    07
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      After the Thrill Is Gone
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        One of These Nights
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1975
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    8.8
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/eagles-one%20of%20these%20nights.jpg"
+                            alt="Artwork for After the Thrill Is Gone"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/EaoqonWmEM4?si=6m3y0xaOeNZwf5px"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 88%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            8.8
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            A cynical classic
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Exploring this album and digging into the deep cuts.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            Driving alone late at night, contemplating life choices and past relationships.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>Henley and Frey wrote this track as a direct, slightly cynical response to B.B. King&rsquo;s legendary blues classic, &ldquo;The Thrill Is Gone.&rdquo;</p>
+<p>Instead of just writing about a breakup, they wanted to explore what actually happens to a relationship when the honeymoon phase ends, the excitement fades, but you are still stuck with each other in reality.</p>
+<p>How ironic, the lyrics also perfectly mirrored the internal dynamics of the Eagles at the time, as the fun of being in a band was slowly being replaced by the exhausting pressures of fame.</p>
+<p><strong>Lesson learned: Even famous rock stars have to figure out what to do when the honeymoon phase of life is officially over ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    08
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Wasted Time
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Hotel California
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1976
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    8.8
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/eagles-hotel.jpg"
+                            alt="Artwork for Wasted Time"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/evxkY964tqk?si=wGCtaMUFyIdI2F9L"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 88%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            8.8
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            A stunning orchestral ballad
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Not entirely sure, but maybe also the time when I was exploring their album. I mean, I am a huge fan so I listen to everything!
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            When you are trying to get over a breakup and need to remind yourself that it wasn&#39;t all for nothing.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>Don Henley wrote this beautiful, heart-wrenching ballad to comfort a friend who was going through a terrible, painful breakup.</p>
+<p>He wanted to convey a very specific, mature message: even if a relationship fails in the end, the love, growth, and moments you shared were not just &ldquo;wasted time.&rdquo; It is a surprisingly gentle perspective from a rock band.</p>
+<p>To give it a grand, dramatic feel, they added a lush string arrangement, heavily inspired by the classic Philadelphia soul music that was popular during that era.</p>
+<p><strong>Lesson learned: Your bad breakup is just one good string arrangement away from becoming a timeless rock masterpiece ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    09
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Take It To The Limit
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        One of These Nights
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1975
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    8.6
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/eagles-one%20of%20these%20nights.jpg"
+                            alt="Artwork for Take It To The Limit"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/MxQXKO194XM?si=l6cCjK0NtbOsjk1o"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 86%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            8.6
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Their first million-selling single
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            I was watching their live concert on YouTube, and Glenn hilariously introduced this song by saying, &#34;My wife often tells me this about the credit card.&#34;
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            When you want to go shopping hehe, or when you just want to push yourself a little bit more in life.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>This song is all about wanting to grow up, constantly pushing yourself, and testing your own boundaries to see how far you can go. It was also famously sung by bassist Randy Meisner, featuring an insanely high vocal note at the end.</p>
+<p>That high note actually became a curse. Meisner had severe stage fright and struggled to hit the perfect note every single night on tour, which caused him massive anxiety.</p>
+<p>The tension over him refusing to sing it one night in 1977 actually led to a literal backstage fistfight between him and Glenn Frey, which ultimately caused Meisner to quit the band.</p>
+<p><strong>Lesson learned: Writing a soaring high note might get you a hit record, but it might also get you punched by your bandmate backstage ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    10
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Seven Bridges Road
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Eagles Live
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1980
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    8.3
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/eagles-live.jpg"
+                            alt="Artwork for Seven Bridges Road"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/73x16ne6auo?si=FkjNp4qB-3Hc5JPh"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 83%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            8.3
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            The ultimate vocal showcase
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Scrolling Instagram when an account introducing great acoustic songs posted a clip of this. It was just the four of them warming up their voices, so pure and clean.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            Sitting around a campfire with your best friends under the stars.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>This song wasn&rsquo;t actually written by the Eagles; it is a cover of a track by country musician Steve Young. However, the Eagles completely made it their own.</p>
+<p>The band used to sing this beautiful, complex five-part harmony arrangement in the locker rooms before concerts, just as a way to warm up their vocal cords and get in sync with one another.</p>
+<p>They loved how it sounded so much that they eventually moved it from the backstage locker room to the main stage, often using it to open their live shows in total acapella perfection.</p>
+<p><strong>Lesson learned: Always record your casual vocal warm-ups, because they might just become a legendary live track ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    11
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      Lyin&#39; Eyes
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        One of These Nights
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1975
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    8.0
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/eagles-one%20of%20these%20nights.jpg"
+                            alt="Artwork for Lyin&#39; Eyes"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/PqccEpqvwPY?si=YmtJVUgDe-fbZyNm"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 80%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            8.0
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Grammy winner for Best Pop Vocal Performance
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Just randomly discovered it when I was exploring their older albums.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            Sitting at a quiet bar or restaurant, people-watching and making up stories about the strangers around you.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>The inspiration for this song came straight from a real-life people-watching session. Glenn Frey and Don Henley were hanging out at Dan Tana&rsquo;s, a famous restaurant in Los Angeles, observing the crowd.</p>
+<p>They noticed beautiful young women dining with much older, wealthy men. They started joking about how these girls might claim they are in love, but it was obviously just for the money. Glenn looked over and simply said, &ldquo;Look at those lyin&rsquo; eyes.&rdquo;</p>
+<p>That one sarcastic observation sparked the entire song, and the duo managed to write this incredibly detailed, storytelling country-rock masterpiece in just two days.</p>
+<p><strong>Lesson learned: Next time you are at a restaurant, pay close attention to the tables around you, you might just accidentally write a Grammy-winning hit ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="song-item">
+
+                <button
+                  class="song-summary"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span class="song-number">
+                    12
+                  </span>
+
+                  <span class="song-main">
+                    <span class="song-title">
+                      New Kid in Town
+                    </span>
+
+                    <span class="song-subtitle">
+                      
+                        Hotel California
+                      
+
+                      
+                        ·
+                      
+
+                      
+                        1976
+                      
+                    </span>
+                  </span>
+
+                  <span class="song-score">
+                    8.0
+                  </span>
+
+                  <span
+                    class="song-toggle-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div class="song-details">
+                  <div class="song-detail-layout">
+
+                    <div class="song-media-column">
+                      <div class="song-artwork">
+                        
+                          <img
+                            src="/images/music/albums/eagles-hotel.jpg"
+                            alt="Artwork for New Kid in Town"
+                            loading="lazy"
+                          >
+                        
+                      </div>
+
+                      
+                        <a
+                          class="watch-mv-link"
+                          href="https://youtu.be/_fW2rw8SwoA?si=Kmbwr1_lV3tmiJ7z"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          
+                            Watch the MV
+                          
+                          ↗
+                        </a>
+                      
+                    </div>
+
+                    <div class="song-facts">
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          My score
+                        </span>
+
+                        <div class="score-line">
+                          <div class="score-track">
+                            <div
+                              class="score-fill"
+                              style="width: 80%;"
+                            ></div>
+                          </div>
+
+                          <span class="fact-value">
+                            8.0
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="song-fact">
+                        <span class="fact-label">
+                          Public recognition
+                        </span>
+
+                        <p class="fact-value">
+                          
+                            Billboard Hot 100 Number One
+                          
+                        </p>
+                      </div>
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Where I heard it
+                          </span>
+
+                          <p class="fact-value">
+                            Exploring the Hotel California album, of course. It seems like I like almost all of their songs.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width best-setting">
+                          <span class="fact-label">
+                            Best setting
+                          </span>
+
+                          <p class="fact-value">
+                            When you move to a new environment and feel a little insecure about your place in the world.
+
+                          </p>
+                        </div>
+                      
+
+                      
+                        <div class="song-fact full-width">
+                          <span class="fact-label">
+                            Fun fact
+                          </span>
+
+                          <div class="fact-value fun-fact-content">
+                            <p>The band wrote this song with their frequent collaborator J.D. Souther. On the surface, it sounds like a song about romance, but it is actually about the ruthless nature of the music industry.</p>
+<p>At the time, the Eagles were at the absolute peak of their fame, but they were already feeling deeply paranoid that a &ldquo;new kid&rdquo; - a younger, cooler, more popular band - would kust come along and steal their spotlight.</p>
+<p>It is a brilliant piece of self-awareness, capturing the fleeting nature of success and the anxiety of knowing that no one stays on top forever.</p>
+<p><strong>Lesson learned: Even the biggest rock band on the planet gets insecure about being replaced by younger, cooler kids, so let&rsquo;s relax a little bit ;)</strong></p>
+
+                          </div>
+                        </div>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            
+
+          
+        </div>
+      </section>
+
+      <section class="back-section">
+        
+          <a
+            class="back-link"
+            href="/music/"
+          >
+            ← Back to My Music Archive
+          </a>
+        
+      </section>
+
+    </main>
+
+    <footer class="artist-footer">
+      Curated by Ju-Ting Sun.
+    </footer>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const songItems = document.querySelectorAll(
+        ".song-item"
+      );
+
+      songItems.forEach((item) => {
+        const summaryButton = item.querySelector(
+          ".song-summary"
+        );
+
+        if (!summaryButton) {
+          return;
+        }
+
+        summaryButton.addEventListener("click", () => {
+          const isOpen = item.classList.toggle(
+            "is-open"
+          );
+
+          summaryButton.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+          );
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tennis on Ju-Ting Sun</title>
+    <link>https://Ruby-0218.github.io/tags/tennis/</link>
+    <description>Recent content in Tennis on Ju-Ting Sun</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 20 Jul 2026 19:30:00 +0800</lastBuildDate>
+    <atom:link href="https://Ruby-0218.github.io/tags/tennis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quantifying ‘The GOAT’: A Data-Driven Analysis of Novak Djokovic</title>
+      <link>https://Ruby-0218.github.io/posts/the-goat/</link>
+      <pubDate>Mon, 20 Jul 2026 19:30:00 +0800</pubDate>
+      <guid>https://Ruby-0218.github.io/posts/the-goat/</guid>
+      <description>A data-driven exploration of Novak Djokovic’s Grand Slam career, clutch performance, five-set endurance, major finals, and career evolution from 2005 through 2025.</description>
+    </item>
+  </channel>
+</rss>
